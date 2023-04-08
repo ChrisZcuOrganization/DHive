@@ -1,0 +1,1653 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x0000000000000000, pid=15982, tid=0x00007f4ed25a3700
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_131-b11) (build 1.8.0_131-b11)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.131-b11 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  0x0000000000000000
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f4ee80a2000):  VMThread [stack: 0x00007f4ed24a4000,0x00007f4ed25a4000] [id=16122]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x00007f4ebd704072, RBX=0x00007f4ebd9e0180, RCX=0x0000000000000000, RDX=0x00007f4ebd655580
+RSP=0x00007f4ed25a2928, RBP=0x00007f4ebd9e0e80, RSI=0x0000000000000000, RDI=0x00007f4ebd9e0330
+R8 =0x0000000000000000, R9 =0x00007f4ed25a3700, R10=0x000000000000000a, R11=0x00007f4ebd10a120
+R12=0x0000000000000000, R13=0x0000000000000049, R14=0x0000000000000000, R15=0x0000000001df2de0
+RIP=0x0000000000000000, EFLAGS=0x0000000000010206, CSGSFS=0x002b000000000033, ERR=0x0000000000000014
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f4ed25a2928)
+0x00007f4ed25a2928:   00007f4ebd63b5f7 0000000000000000
+0x00007f4ed25a2938:   00007f4ec0af8780 0000000000000082
+0x00007f4ed25a2948:   00007f4ebd6552de 00007f4ef0e332a0
+0x00007f4ed25a2958:   00007f4ec0af8780 0000000000000082
+0x00007f4ed25a2968:   00007f4ef0e36718 0000000000000049
+0x00007f4ed25a2978:   00007f4ef0e3b708 0000000001df2de0
+0x00007f4ed25a2988:   00007f4ebd6555a5 0000000000000001
+0x00007f4ed25a2998:   00007f4ef0a8e161 00007f4ebfbe6370
+0x00007f4ed25a29a8:   0000000196a05700 00007f4ee804e740
+0x00007f4ed25a29b8:   0000000000000082 00007f4ed25a2a10
+0x00007f4ed25a29c8:   00007f4ee80a1340 00007f4ee804e740
+0x00007f4ed25a29d8:   00000000000003d8 00007f4ee804eb28
+0x00007f4ed25a29e8:   00007f4ef0a8e25a 00007f4ed25a2a10
+0x00007f4ed25a29f8:   00007f4ef00e6807 00007f4ef0a07108
+0x00007f4ed25a2a08:   00007f4ebfbe6370 00007f4ed25a2a60
+0x00007f4ed25a2a18:   00007f4ef0529765 00007f4ed25a2a40
+0x00007f4ed25a2a28:   00007f4ee804e750 00000000000ecbcb
+0x00007f4ed25a2a38:   0000000000000000 00007f4ebfbe6370
+0x00007f4ed25a2a48:   00007f4ee80a1340 00007f4ee804e740
+0x00007f4ed25a2a58:   00007f4ef09d3918 00007f4ed25a2b10
+0x00007f4ed25a2a68:   00007f4ef0527b3a 00007f4ef0a19f40
+0x00007f4ed25a2a78:   00007f4ee804e750 00007f4ee804eb28
+0x00007f4ed25a2a88:   00000000000003d8 0000000000000000
+0x00007f4ed25a2a98:   0000000e2e0f2c0a 0000001000000301
+0x00007f4ed25a2aa8:   00007f4ee80a2ed0 0000000000000000
+0x00007f4ed25a2ab8:   00007f4ed9017a08 00007f4ed9005500
+0x00007f4ed25a2ac8:   0000000000000000 0000000000000000
+0x00007f4ed25a2ad8:   00007f4ec6b21590 00007f4ef0a0f1d8
+0x00007f4ed25a2ae8:   0000000000000000 0000000000000000
+0x00007f4ed25a2af8:   00007f4ef0a0f1d8 00007f4ee80a2000
+0x00007f4ed25a2b08:   00007f4ef0a19750 00007f4ed25a2cb0
+0x00007f4ed25a2b18:   00007f4ef0527ebe 00007f4ed25a2b30 
+
+Instructions: (pc=0x0000000000000000)
+0xffffffffffffffe0:   
+
+Register to memory mapping:
+
+RAX=0x00007f4ebd704072: <offset 0x157072> in /tmp/org_apache_hadoop_hive_ql_exec_Operator.so at 0x00007f4ebd5ad000
+RBX=0x00007f4ebd9e0180: <offset 0x433180> in /tmp/org_apache_hadoop_hive_ql_exec_Operator.so at 0x00007f4ebd5ad000
+RCX=0x0000000000000000 is an unknown value
+RDX=0x00007f4ebd655580: <offset 0xa8580> in /tmp/org_apache_hadoop_hive_ql_exec_Operator.so at 0x00007f4ebd5ad000
+RSP=0x00007f4ed25a2928 is an unknown value
+RBP=0x00007f4ebd9e0e80: <offset 0x433e80> in /tmp/org_apache_hadoop_hive_ql_exec_Operator.so at 0x00007f4ebd5ad000
+RSI=0x0000000000000000 is an unknown value
+RDI=0x00007f4ebd9e0330: <offset 0x433330> in /tmp/org_apache_hadoop_hive_ql_exec_Operator.so at 0x00007f4ebd5ad000
+R8 =0x0000000000000000 is an unknown value
+R9 =0x00007f4ed25a3700 is an unknown value
+R10=0x000000000000000a is an unknown value
+R11=0x00007f4ebd10a120: _ZNSt13basic_ostreamIwSt11char_traitsIwEE5flushEv+0 in /usr/lib/x86_64-linux-gnu/libstdc++.so.6 at 0x00007f4ebcff5000
+R12=0x0000000000000000 is an unknown value
+R13=0x0000000000000049 is an unknown value
+R14=0x0000000000000000 is an unknown value
+R15=0x0000000001df2de0 is an unknown value
+
+
+Stack: [0x00007f4ed24a4000,0x00007f4ed25a4000],  sp=0x00007f4ed25a2928,  free space=1018k
+VM_Operation (0x00007f4ebfbe6370): Exit, mode: safepoint, requested by thread 0x00007f4eeb9ec800
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f4eeb9ec800 JavaThread "SIGINT handler" daemon [_thread_blocked, id=17398, stack(0x00007f4ebfae7000,0x00007f4ebfbe8000)]
+  0x00007f4eebfaa800 JavaThread "IPC Client (1532554556) connection to dbg20/10.20.120.63:9000 from hive" daemon [_thread_blocked, id=17308, stack(0x00007f4ebf9e6000,0x00007f4ebfae7000)]
+  0x00007f4ee99de800 JavaThread "IPC Client (1532554556) connection to dbg19/10.20.95.197:33053 from hive" daemon [_thread_blocked, id=17282, stack(0x00007f4ebf0e3000,0x00007f4ebf1e4000)]
+  0x00007f4eebb4a800 JavaThread "IPC Client (1532554556) connection to dbg20/10.20.120.63:18040 from hive" daemon [_thread_blocked, id=16366, stack(0x00007f4ebf5e4000,0x00007f4ebf6e5000)]
+  0x00007f4ee9a70800 JavaThread "pool-8-thread-1" [_thread_blocked, id=16343, stack(0x00007f4ec44ca000,0x00007f4ec45cb000)]
+  0x00007f4ec04fd000 JavaThread "HikariPool-2 housekeeper" daemon [_thread_blocked, id=16328, stack(0x00007f4ec4dcd000,0x00007f4ec4ece000)]
+  0x00007f4ec0460000 JavaThread "HikariPool-1 housekeeper" daemon [_thread_blocked, id=16327, stack(0x00007f4ec611d000,0x00007f4ec621e000)]
+  0x00007f4ec0392800 JavaThread "Abandoned connection cleanup thread" daemon [_thread_blocked, id=16326, stack(0x00007f4ec631f000,0x00007f4ec6420000)]
+  0x00007f4eeb797800 JavaThread "LeaseRenewer:hive@dbg20:9000" daemon [_thread_blocked, id=16150, stack(0x00007f4ec621e000,0x00007f4ec631f000)]
+  0x00007f4eeb6bf800 JavaThread "IPC Parameter Sending Thread #0" daemon [_thread_blocked, id=16148, stack(0x00007f4ec6620000,0x00007f4ec6721000)]
+  0x00007f4eeb62f800 JavaThread "client DomainSocketWatcher" daemon [_thread_in_native, id=16146, stack(0x00007f4ec6a22000,0x00007f4ec6b23000)]
+  0x00007f4eea0b1000 JavaThread "Log4j2-TF-2-AsyncLogger[AsyncContext@23223dd8]-1" daemon [_thread_blocked, id=16144, stack(0x00007f4ec7123000,0x00007f4ec7224000)]
+  0x00007f4eea02b800 JavaThread "org.apache.hadoop.fs.FileSystem$Statistics$StatisticsDataReferenceCleaner" daemon [_thread_blocked, id=16143, stack(0x00007f4ec7a61000,0x00007f4ec7b62000)]
+  0x00007f4ee9df9800 JavaThread "process reaper" daemon [_thread_blocked, id=16141, stack(0x00007f4ec7b62000,0x00007f4ec7b9b000)]
+  0x00007f4ee811e800 JavaThread "Service Thread" daemon [_thread_blocked, id=16138, stack(0x00007f4ed12f8000,0x00007f4ed13f9000)]
+  0x00007f4ee810b000 JavaThread "C1 CompilerThread11" daemon [_thread_blocked, id=16137, stack(0x00007f4ed13fa000,0x00007f4ed14fa000)]
+  0x00007f4ee8108800 JavaThread "C1 CompilerThread10" daemon [_thread_blocked, id=16136, stack(0x00007f4ed14fb000,0x00007f4ed15fb000)]
+  0x00007f4ee8106800 JavaThread "C1 CompilerThread9" daemon [_thread_blocked, id=16135, stack(0x00007f4ed15fc000,0x00007f4ed16fc000)]
+  0x00007f4ee80fc800 JavaThread "C1 CompilerThread8" daemon [_thread_blocked, id=16134, stack(0x00007f4ed16fd000,0x00007f4ed17fd000)]
+  0x00007f4ee80fa000 JavaThread "C2 CompilerThread7" daemon [_thread_blocked, id=16133, stack(0x00007f4ed17fe000,0x00007f4ed18fe000)]
+  0x00007f4ee80f8000 JavaThread "C2 CompilerThread6" daemon [_thread_blocked, id=16132, stack(0x00007f4ed18ff000,0x00007f4ed19ff000)]
+  0x00007f4ee80f5800 JavaThread "C2 CompilerThread5" daemon [_thread_blocked, id=16131, stack(0x00007f4ed1a00000,0x00007f4ed1b00000)]
+  0x00007f4ee80eb800 JavaThread "C2 CompilerThread4" daemon [_thread_blocked, id=16130, stack(0x00007f4ed1b01000,0x00007f4ed1c01000)]
+  0x00007f4ee80e9800 JavaThread "C2 CompilerThread3" daemon [_thread_blocked, id=16129, stack(0x00007f4ed1c02000,0x00007f4ed1d02000)]
+  0x00007f4ee80e7000 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=16128, stack(0x00007f4ed1d03000,0x00007f4ed1e03000)]
+  0x00007f4ee80e5800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=16127, stack(0x00007f4ed1e04000,0x00007f4ed1f04000)]
+  0x00007f4ee80e2800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=16126, stack(0x00007f4ed1f05000,0x00007f4ed2005000)]
+  0x00007f4ee80e1000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=16125, stack(0x00007f4ed2005000,0x00007f4ed2106000)]
+  0x00007f4ee80ae000 JavaThread "Finalizer" daemon [_thread_blocked, id=16124, stack(0x00007f4ed22a1000,0x00007f4ed23a2000)]
+  0x00007f4ee80a9800 JavaThread "Reference Handler" daemon [_thread_blocked, id=16123, stack(0x00007f4ed23a2000,0x00007f4ed24a3000)]
+  0x00007f4ee8020800 JavaThread "dd2f4774-65dd-4573-bdde-bcefdcf1c092 main" [_thread_blocked, id=16108, stack(0x00007f4ef1589000,0x00007f4ef1689000)]
+
+Other Threads:
+=>0x00007f4ee80a2000 VMThread [stack: 0x00007f4ed24a4000,0x00007f4ed25a4000] [id=16122]
+
+VM state:at safepoint (shutting down)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007f4ee801d340] Threads_lock - owner thread: 0x00007f4ee80a2000
+
+Heap:
+ PSYoungGen      total 70656K, used 29047K [0x00000000fab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 58368K, 49% used [0x00000000fab00000,0x00000000fc75dd18,0x00000000fe400000)
+  from space 12288K, 0% used [0x00000000ff400000,0x00000000ff400000,0x0000000100000000)
+  to   space 14336K, 0% used [0x00000000fe400000,0x00000000fe400000,0x00000000ff200000)
+ ParOldGen       total 175104K, used 73423K [0x00000000f0000000, 0x00000000fab00000, 0x00000000fab00000)
+  object space 175104K, 41% used [0x00000000f0000000,0x00000000f47b3c08,0x00000000fab00000)
+ Metaspace       used 98099K, capacity 98698K, committed 99456K, reserved 1138688K
+  class space    used 10617K, capacity 10811K, committed 10880K, reserved 1048576K
+
+Card table byte_map: [0x00007f4ef1507000,0x00007f4ef1588000] byte_map_base: 0x00007f4ef0d87000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f4ef0a1df60
+ Begin Bits: [0x00007f4eecd4e000, 0x00007f4eed14e000)
+ End Bits:   [0x00007f4eed14e000, 0x00007f4eed54e000)
+
+Polling page: 0x00007f4ef169b000
+
+CodeCache: size=245760Kb used=26526Kb max_used=26540Kb free=219233Kb
+ bounds [0x00007f4ed9000000, 0x00007f4edaa20000, 0x00007f4ee8000000]
+ total_blobs=8092 nmethods=7295 adapters=706
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 60.802 Thread 0x00007f4ee810b000 8588       1       org.apache.hadoop.ipc.ProtocolProxy::getProxy (5 bytes)
+Event: 60.802 Thread 0x00007f4ee8108800 nmethod 8585 0x00007f4ed9c03b90 code [0x00007f4ed9c03ce0, 0x00007f4ed9c03df0]
+Event: 60.802 Thread 0x00007f4ee810b000 nmethod 8588 0x00007f4ed9981810 code [0x00007f4ed9981960, 0x00007f4ed9981a70]
+Event: 60.808 Thread 0x00007f4ee8106800 8589       3       org.apache.commons.lang.text.StrBuilder::append (54 bytes)
+Event: 60.809 Thread 0x00007f4ee8106800 nmethod 8589 0x00007f4ed9980f90 code [0x00007f4ed9981140, 0x00007f4ed9981668]
+Event: 60.884 Thread 0x00007f4ee80eb800 8590       4       org.apache.hadoop.conf.Configuration$Parser::handleEndProperty (237 bytes)
+Event: 60.884 Thread 0x00007f4ee80e2800 8591       4       org.apache.hadoop.conf.Configuration$Parser::handleEndElement (410 bytes)
+Event: 60.885 Thread 0x00007f4ee80e7000 8592       4       org.apache.hadoop.conf.Configuration$ParsedItem::<init> (32 bytes)
+Event: 60.887 Thread 0x00007f4ee80e7000 nmethod 8592 0x00007f4ed94b1a10 code [0x00007f4ed94b1b60, 0x00007f4ed94b1bf8]
+Event: 60.901 Thread 0x00007f4ee8108800 8593       3       com.ctc.wstx.sr.BasicStreamReader::handleRootElem (105 bytes)
+
+GC Heap History (10 events):
+Event: 14.808 GC heap before
+{Heap before GC invocations=76 (full 3):
+ PSYoungGen      total 74752K, used 68114K [0x00000000fab00000, 0x00000000fff00000, 0x0000000100000000)
+  eden space 64512K, 100% used [0x00000000fab00000,0x00000000fea00000,0x00000000fea00000)
+  from space 10240K, 35% used [0x00000000ff500000,0x00000000ff884be8,0x00000000fff00000)
+  to   space 10752K, 0% used [0x00000000fea00000,0x00000000fea00000,0x00000000ff480000)
+ ParOldGen       total 175104K, used 71781K [0x00000000f0000000, 0x00000000fab00000, 0x00000000fab00000)
+  object space 175104K, 40% used [0x00000000f0000000,0x00000000f4619790,0x00000000fab00000)
+ Metaspace       used 92323K, capacity 92846K, committed 93696K, reserved 1132544K
+  class space    used 9996K, capacity 10172K, committed 10240K, reserved 1048576K
+Event: 14.813 GC heap after
+Heap after GC invocations=76 (full 3):
+ PSYoungGen      total 75264K, used 6151K [0x00000000fab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 64512K, 0% used [0x00000000fab00000,0x00000000fab00000,0x00000000fea00000)
+  from space 10752K, 57% used [0x00000000fea00000,0x00000000ff001e90,0x00000000ff480000)
+  to   space 10752K, 0% used [0x00000000ff580000,0x00000000ff580000,0x0000000100000000)
+ ParOldGen       total 175104K, used 71789K [0x00000000f0000000, 0x00000000fab00000, 0x00000000fab00000)
+  object space 175104K, 40% used [0x00000000f0000000,0x00000000f461b790,0x00000000fab00000)
+ Metaspace       used 92323K, capacity 92846K, committed 93696K, reserved 1132544K
+  class space    used 9996K, capacity 10172K, committed 10240K, reserved 1048576K
+}
+Event: 15.766 GC heap before
+{Heap before GC invocations=77 (full 3):
+ PSYoungGen      total 75264K, used 70663K [0x00000000fab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 64512K, 100% used [0x00000000fab00000,0x00000000fea00000,0x00000000fea00000)
+  from space 10752K, 57% used [0x00000000fea00000,0x00000000ff001e90,0x00000000ff480000)
+  to   space 10752K, 0% used [0x00000000ff580000,0x00000000ff580000,0x0000000100000000)
+ ParOldGen       total 175104K, used 71789K [0x00000000f0000000, 0x00000000fab00000, 0x00000000fab00000)
+  object space 175104K, 40% used [0x00000000f0000000,0x00000000f461b790,0x00000000fab00000)
+ Metaspace       used 94169K, capacity 94712K, committed 95488K, reserved 1134592K
+  class space    used 10209K, capacity 10391K, committed 10496K, reserved 1048576K
+Event: 15.780 GC heap after
+Heap after GC invocations=77 (full 3):
+ PSYoungGen      total 74240K, used 8424K [0x00000000fab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 63488K, 0% used [0x00000000fab00000,0x00000000fab00000,0x00000000fe900000)
+  from space 10752K, 78% used [0x00000000ff580000,0x00000000ffdba240,0x0000000100000000)
+  to   space 11776K, 0% used [0x00000000fe900000,0x00000000fe900000,0x00000000ff480000)
+ ParOldGen       total 175104K, used 71797K [0x00000000f0000000, 0x00000000fab00000, 0x00000000fab00000)
+  object space 175104K, 41% used [0x00000000f0000000,0x00000000f461d790,0x00000000fab00000)
+ Metaspace       used 94169K, capacity 94712K, committed 95488K, reserved 1134592K
+  class space    used 10209K, capacity 10391K, committed 10496K, reserved 1048576K
+}
+Event: 53.772 GC heap before
+{Heap before GC invocations=78 (full 3):
+ PSYoungGen      total 74240K, used 71912K [0x00000000fab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 63488K, 100% used [0x00000000fab00000,0x00000000fe900000,0x00000000fe900000)
+  from space 10752K, 78% used [0x00000000ff580000,0x00000000ffdba240,0x0000000100000000)
+  to   space 11776K, 0% used [0x00000000fe900000,0x00000000fe900000,0x00000000ff480000)
+ ParOldGen       total 175104K, used 71797K [0x00000000f0000000, 0x00000000fab00000, 0x00000000fab00000)
+  object space 175104K, 41% used [0x00000000f0000000,0x00000000f461d790,0x00000000fab00000)
+ Metaspace       used 95478K, capacity 96116K, committed 96896K, reserved 1136640K
+  class space    used 10337K, capacity 10529K, committed 10624K, reserved 1048576K
+Event: 53.780 GC heap after
+Heap after GC invocations=78 (full 3):
+ PSYoungGen      total 71680K, used 7818K [0x00000000fab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 63488K, 0% used [0x00000000fab00000,0x00000000fab00000,0x00000000fe900000)
+  from space 8192K, 95% used [0x00000000fe900000,0x00000000ff0a2be0,0x00000000ff100000)
+  to   space 12288K, 0% used [0x00000000ff400000,0x00000000ff400000,0x0000000100000000)
+ ParOldGen       total 175104K, used 71805K [0x00000000f0000000, 0x00000000fab00000, 0x00000000fab00000)
+  object space 175104K, 41% used [0x00000000f0000000,0x00000000f461f790,0x00000000fab00000)
+ Metaspace       used 95478K, capacity 96116K, committed 96896K, reserved 1136640K
+  class space    used 10337K, capacity 10529K, committed 10624K, reserved 1048576K
+}
+Event: 54.095 GC heap before
+{Heap before GC invocations=79 (full 3):
+ PSYoungGen      total 71680K, used 65613K [0x00000000fab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 63488K, 91% used [0x00000000fab00000,0x00000000fe370a78,0x00000000fe900000)
+  from space 8192K, 95% used [0x00000000fe900000,0x00000000ff0a2be0,0x00000000ff100000)
+  to   space 12288K, 0% used [0x00000000ff400000,0x00000000ff400000,0x0000000100000000)
+ ParOldGen       total 175104K, used 71805K [0x00000000f0000000, 0x00000000fab00000, 0x00000000fab00000)
+  object space 175104K, 41% used [0x00000000f0000000,0x00000000f461f790,0x00000000fab00000)
+ Metaspace       used 97158K, capacity 97702K, committed 98380K, reserved 1136640K
+  class space    used 10514K, capacity 10692K, committed 10752K, reserved 1048576K
+Event: 54.104 GC heap after
+Heap after GC invocations=79 (full 3):
+ PSYoungGen      total 70656K, used 12060K [0x00000000fab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 58368K, 0% used [0x00000000fab00000,0x00000000fab00000,0x00000000fe400000)
+  from space 12288K, 98% used [0x00000000ff400000,0x00000000fffc7388,0x0000000100000000)
+  to   space 14336K, 0% used [0x00000000fe400000,0x00000000fe400000,0x00000000ff200000)
+ ParOldGen       total 175104K, used 71813K [0x00000000f0000000, 0x00000000fab00000, 0x00000000fab00000)
+  object space 175104K, 41% used [0x00000000f0000000,0x00000000f4621790,0x00000000fab00000)
+ Metaspace       used 97158K, capacity 97702K, committed 98380K, reserved 1136640K
+  class space    used 10514K, capacity 10692K, committed 10752K, reserved 1048576K
+}
+Event: 54.104 GC heap before
+{Heap before GC invocations=80 (full 4):
+ PSYoungGen      total 70656K, used 12060K [0x00000000fab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 58368K, 0% used [0x00000000fab00000,0x00000000fab00000,0x00000000fe400000)
+  from space 12288K, 98% used [0x00000000ff400000,0x00000000fffc7388,0x0000000100000000)
+  to   space 14336K, 0% used [0x00000000fe400000,0x00000000fe400000,0x00000000ff200000)
+ ParOldGen       total 175104K, used 71813K [0x00000000f0000000, 0x00000000fab00000, 0x00000000fab00000)
+  object space 175104K, 41% used [0x00000000f0000000,0x00000000f4621790,0x00000000fab00000)
+ Metaspace       used 97158K, capacity 97702K, committed 98380K, reserved 1136640K
+  class space    used 10514K, capacity 10692K, committed 10752K, reserved 1048576K
+Event: 54.258 GC heap after
+Heap after GC invocations=80 (full 4):
+ PSYoungGen      total 70656K, used 0K [0x00000000fab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 58368K, 0% used [0x00000000fab00000,0x00000000fab00000,0x00000000fe400000)
+  from space 12288K, 0% used [0x00000000ff400000,0x00000000ff400000,0x0000000100000000)
+  to   space 14336K, 0% used [0x00000000fe400000,0x00000000fe400000,0x00000000ff200000)
+ ParOldGen       total 175104K, used 73423K [0x00000000f0000000, 0x00000000fab00000, 0x00000000fab00000)
+  object space 175104K, 41% used [0x00000000f0000000,0x00000000f47b3c08,0x00000000fab00000)
+ Metaspace       used 97142K, capacity 97672K, committed 98380K, reserved 1136640K
+  class space    used 10511K, capacity 10682K, committed 10752K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 54.070 Thread 0x00007f4ee8020800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f4ed93d1f70 method=com.google.protobuf.CodedOutputStream.computeBytesSizeNoTag(Lcom/google/protobuf/ByteString;)I @ 1
+Event: 54.070 Thread 0x00007f4ee8020800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f4ed940080c method=com.google.protobuf.CodedOutputStream.writeBytesNoTag(Lcom/google/protobuf/ByteString;)V @ 2
+Event: 54.070 Thread 0x00007f4ee8020800 Uncommon trap: reason=speculate_class_check action=maybe_recompile pc=0x00007f4ed93445b4 method=com.google.protobuf.ByteString.copyTo([BIII)V @ 101
+Event: 54.276 Thread 0x00007f4ee8020800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f4eda951f60 method=org.apache.tez.dag.api.records.DAGProtos$ConfigurationProto.getConfKeyValuesCount()I @ 4
+Event: 54.277 Thread 0x00007f4ee8020800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f4ed9a79c58 method=com.google.protobuf.CodedOutputStream.computeRawVarint32Size(I)I @ 14
+Event: 54.277 Thread 0x00007f4ee8020800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f4ed995d24c method=com.google.protobuf.CodedOutputStream.computeRawVarint32Size(I)I @ 14
+Event: 54.277 Thread 0x00007f4ee8020800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f4ed995d24c method=com.google.protobuf.CodedOutputStream.computeRawVarint32Size(I)I @ 14
+Event: 54.277 Thread 0x00007f4ee8020800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f4ed995d24c method=com.google.protobuf.CodedOutputStream.computeRawVarint32Size(I)I @ 14
+Event: 54.277 Thread 0x00007f4ee8020800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f4ed995d24c method=com.google.protobuf.CodedOutputStream.computeRawVarint32Size(I)I @ 14
+Event: 54.279 Thread 0x00007f4ee8020800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f4ed99ba788 method=com.google.protobuf.CodedOutputStream.writeRawByte(B)V @ 8
+
+Internal exceptions (10 events):
+Event: 14.980 Thread 0x00007f4eeb841800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000fd8dcd28) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u131/8869/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 14.980 Thread 0x00007f4eeb841800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000fd8dda88) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u131/8869/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 14.980 Thread 0x00007f4eeb841800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000fd8dde80) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u131/8869/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 14.980 Thread 0x00007f4eeb841800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000fd8debe8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u131/8869/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 14.980 Thread 0x00007f4eeb841800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000fd8defe0) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u131/8869/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 14.980 Thread 0x00007f4eeb841800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000fd8dfd40) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u131/8869/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 14.980 Thread 0x00007f4eeb841800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000fd8e0138) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u131/8869/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 14.980 Thread 0x00007f4eeb841800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000fd8e0e98) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u131/8869/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 14.980 Thread 0x00007f4eeb841800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000fd8e1290) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u131/8869/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 15.177 Thread 0x00007f4eea0b1000 Implicit null exception at 0x00007f4eda840230 to 0x00007f4eda8403f9
+
+Events (10 events):
+Event: 60.833 Executing VM operation: RevokeBias done
+Event: 60.833 Executing VM operation: RevokeBias
+Event: 60.833 Executing VM operation: RevokeBias done
+Event: 60.882 Executing VM operation: RevokeBias
+Event: 60.882 Executing VM operation: RevokeBias done
+Event: 60.882 Thread 0x00007f4ee9a77800 Thread exited: 0x00007f4ee9a77800
+Event: 60.902 Thread 0x00007f4eccb53000 Thread exited: 0x00007f4eccb53000
+Event: 60.902 Executing VM operation: RevokeBias
+Event: 60.902 Executing VM operation: RevokeBias done
+Event: 60.902 Executing VM operation: Exit
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 fd:00 77202780                           /home/hive/env/jdk1.8.0_131/bin/java
+00600000-00601000 rw-p 00000000 fd:00 77202780                           /home/hive/env/jdk1.8.0_131/bin/java
+01df1000-05296000 rw-p 00000000 00:00 0                                  [heap]
+f0000000-100aa0000 rw-p 00000000 00:00 0 
+100aa0000-140000000 ---p 00000000 00:00 0 
+7f4ebc39e000-7f4ebc39f000 r-xp 00000000 fd:00 33816722                   /tmp/libjansi-64-4850779945535833291.so (deleted)
+7f4ebc39f000-7f4ebc59e000 ---p 00001000 fd:00 33816722                   /tmp/libjansi-64-4850779945535833291.so (deleted)
+7f4ebc59e000-7f4ebc59f000 rw-p 00000000 fd:00 33816722                   /tmp/libjansi-64-4850779945535833291.so (deleted)
+7f4ebc59f000-7f4ebc61f000 rw-p 00000000 00:00 0 
+7f4ebc61f000-7f4ebc79f000 ---p 00000000 00:00 0 
+7f4ebc79f000-7f4ebc7e0000 r-xp 00000000 fd:00 33816692                   /tmp/snappy-1.0.5-c7b66349-f2f5-4ca6-be8e-fbdffe2207b9-libsnappyjava.so (deleted)
+7f4ebc7e0000-7f4ebc9e0000 ---p 00041000 fd:00 33816692                   /tmp/snappy-1.0.5-c7b66349-f2f5-4ca6-be8e-fbdffe2207b9-libsnappyjava.so (deleted)
+7f4ebc9e0000-7f4ebc9e3000 rw-p 00041000 fd:00 33816692                   /tmp/snappy-1.0.5-c7b66349-f2f5-4ca6-be8e-fbdffe2207b9-libsnappyjava.so (deleted)
+7f4ebc9e3000-7f4ebcbf5000 rw-p 00000000 00:00 0 
+7f4ebcbf5000-7f4ebcdf5000 rw-p 00000000 00:00 0 
+7f4ebcdf5000-7f4ebcff5000 rw-p 00000000 00:00 0 
+7f4ebcff5000-7f4ebd16e000 r-xp 00000000 fd:00 117839605                  /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f4ebd16e000-7f4ebd36e000 ---p 00179000 fd:00 117839605                  /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f4ebd36e000-7f4ebd378000 r--p 00179000 fd:00 117839605                  /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f4ebd378000-7f4ebd37a000 rw-p 00183000 fd:00 117839605                  /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f4ebd37a000-7f4ebd37e000 rw-p 00000000 00:00 0 
+7f4ebd37e000-7f4ebd3ac000 r-xp 00000000 fd:00 117841043                  /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+7f4ebd3ac000-7f4ebd5ab000 ---p 0002e000 fd:00 117841043                  /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+7f4ebd5ab000-7f4ebd5ac000 r--p 0002d000 fd:00 117841043                  /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+7f4ebd5ac000-7f4ebd5ad000 rw-p 0002e000 fd:00 117841043                  /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+7f4ebd5ad000-7f4ebd7d9000 r-xp 00000000 fd:00 33816578                   /tmp/org_apache_hadoop_hive_ql_exec_Operator.so
+7f4ebd7d9000-7f4ebd9d9000 ---p 0022c000 fd:00 33816578                   /tmp/org_apache_hadoop_hive_ql_exec_Operator.so
+7f4ebd9d9000-7f4ebd9de000 r--p 0022c000 fd:00 33816578                   /tmp/org_apache_hadoop_hive_ql_exec_Operator.so
+7f4ebd9de000-7f4ebd9e0000 rw-p 00231000 fd:00 33816578                   /tmp/org_apache_hadoop_hive_ql_exec_Operator.so
+7f4ebd9e0000-7f4ebdbe2000 rw-p 00000000 00:00 0 
+7f4ebdbe2000-7f4ebdde2000 rw-p 00000000 00:00 0 
+7f4ebdde2000-7f4ebdfe2000 rw-p 00000000 00:00 0 
+7f4ebdfe2000-7f4ebe1e2000 rw-p 00000000 00:00 0 
+7f4ebe1e2000-7f4ebe3e2000 rw-p 00000000 00:00 0 
+7f4ebe3e2000-7f4ebe5e2000 rw-p 00000000 00:00 0 
+7f4ebe5e2000-7f4ebe7e2000 rw-p 00000000 00:00 0 
+7f4ebe7e2000-7f4ebe9e2000 rw-p 00000000 00:00 0 
+7f4ebe9e2000-7f4ebebe2000 rw-p 00000000 00:00 0 
+7f4ebebe2000-7f4ebede2000 rw-p 00000000 00:00 0 
+7f4ebede2000-7f4ebede5000 ---p 00000000 00:00 0 
+7f4ebede5000-7f4ebf0e3000 rw-p 00000000 00:00 0 
+7f4ebf0e3000-7f4ebf0e6000 ---p 00000000 00:00 0 
+7f4ebf0e6000-7f4ebf3e4000 rw-p 00000000 00:00 0 
+7f4ebf3e4000-7f4ebf5e4000 rw-p 00000000 00:00 0 
+7f4ebf5e4000-7f4ebf5e7000 ---p 00000000 00:00 0 
+7f4ebf5e7000-7f4ebf6e5000 rw-p 00000000 00:00 0 
+7f4ebf6e5000-7f4ebf6e8000 ---p 00000000 00:00 0 
+7f4ebf6e8000-7f4ebf9e6000 rw-p 00000000 00:00 0 
+7f4ebf9e6000-7f4ebf9e9000 ---p 00000000 00:00 0 
+7f4ebf9e9000-7f4ebfae7000 rw-p 00000000 00:00 0 
+7f4ebfae7000-7f4ebfaea000 ---p 00000000 00:00 0 
+7f4ebfaea000-7f4ebfde8000 rw-p 00000000 00:00 0 
+7f4ebfde8000-7f4ebfdff000 r-xp 00000000 fd:00 60293912                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f4ebfdff000-7f4ebfffe000 ---p 00017000 fd:00 60293912                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f4ebfffe000-7f4ebffff000 r--p 00016000 fd:00 60293912                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f4ebffff000-7f4ec0000000 rw-p 00017000 fd:00 60293912                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f4ec0000000-7f4ec0f0f000 rw-p 00000000 00:00 0 
+7f4ec0f0f000-7f4ec4000000 ---p 00000000 00:00 0 
+7f4ec4083000-7f4ec40b5000 r-xp 00000000 fd:00 77858501                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libsunec.so
+7f4ec40b5000-7f4ec42b4000 ---p 00032000 fd:00 77858501                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libsunec.so
+7f4ec42b4000-7f4ec42ba000 rw-p 00031000 fd:00 77858501                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libsunec.so
+7f4ec42ba000-7f4ec44ca000 rw-p 00000000 00:00 0 
+7f4ec44ca000-7f4ec44cd000 ---p 00000000 00:00 0 
+7f4ec44cd000-7f4ec47cb000 rw-p 00000000 00:00 0 
+7f4ec47cb000-7f4ec49cb000 rw-p 00000000 00:00 0 
+7f4ec49cb000-7f4ec49ce000 ---p 00000000 00:00 0 
+7f4ec49ce000-7f4ec4acc000 rw-p 00000000 00:00 0 
+7f4ec4acc000-7f4ec4acf000 ---p 00000000 00:00 0 
+7f4ec4acf000-7f4ec4dcd000 rw-p 00000000 00:00 0 
+7f4ec4dcd000-7f4ec4dd0000 ---p 00000000 00:00 0 
+7f4ec4dd0000-7f4ec50ce000 rw-p 00000000 00:00 0 
+7f4ec50ce000-7f4ec52ce000 rw-p 00000000 00:00 0 
+7f4ec52ce000-7f4ec54ce000 rw-p 00000000 00:00 0 
+7f4ec54ce000-7f4ec56ce000 rw-p 00000000 00:00 0 
+7f4ec56ce000-7f4ec58ce000 rw-p 00000000 00:00 0 
+7f4ec58ce000-7f4ec5ace000 rw-p 00000000 00:00 0 
+7f4ec5ace000-7f4ec5cce000 rw-p 00000000 00:00 0 
+7f4ec5cce000-7f4ec5d09000 r-xp 00000000 fd:00 60293943                   /lib/x86_64-linux-gnu/libnss_systemd.so.2
+7f4ec5d09000-7f4ec5f08000 ---p 0003b000 fd:00 60293943                   /lib/x86_64-linux-gnu/libnss_systemd.so.2
+7f4ec5f08000-7f4ec5f0b000 r--p 0003a000 fd:00 60293943                   /lib/x86_64-linux-gnu/libnss_systemd.so.2
+7f4ec5f0b000-7f4ec5f0c000 rw-p 0003d000 fd:00 60293943                   /lib/x86_64-linux-gnu/libnss_systemd.so.2
+7f4ec5f0e000-7f4ec5f14000 r--s 0003f000 fd:00 77858404                   /home/hive/env/jdk1.8.0_131/jre/lib/ext/sunjce_provider.jar
+7f4ec5f14000-7f4ec5f16000 r--s 00009000 fd:00 77858394                   /home/hive/env/jdk1.8.0_131/jre/lib/ext/sunec.jar
+7f4ec5f16000-7f4ec5f1a000 r--s 0003a000 fd:00 77858401                   /home/hive/env/jdk1.8.0_131/jre/lib/ext/sunpkcs11.jar
+7f4ec5f1a000-7f4ec5f1d000 r--s 0001a000 fd:00 77858565                   /home/hive/env/jdk1.8.0_131/jre/lib/jce.jar
+7f4ec5f1d000-7f4ec611d000 rw-p 00000000 00:00 0 
+7f4ec611d000-7f4ec6120000 ---p 00000000 00:00 0 
+7f4ec6120000-7f4ec621e000 rw-p 00000000 00:00 0 
+7f4ec621e000-7f4ec6221000 ---p 00000000 00:00 0 
+7f4ec6221000-7f4ec631f000 rw-p 00000000 00:00 0 
+7f4ec631f000-7f4ec6322000 ---p 00000000 00:00 0 
+7f4ec6322000-7f4ec6620000 rw-p 00000000 00:00 0 
+7f4ec6620000-7f4ec6623000 ---p 00000000 00:00 0 
+7f4ec6623000-7f4ec6721000 rw-p 00000000 00:00 0 
+7f4ec6721000-7f4ec6724000 ---p 00000000 00:00 0 
+7f4ec6724000-7f4ec6a22000 rw-p 00000000 00:00 0 
+7f4ec6a22000-7f4ec6a25000 ---p 00000000 00:00 0 
+7f4ec6a25000-7f4ec6d23000 rw-p 00000000 00:00 0 
+7f4ec6d23000-7f4ec6f23000 rw-p 00000000 00:00 0 
+7f4ec6f23000-7f4ec7123000 rw-p 00000000 00:00 0 
+7f4ec7123000-7f4ec7126000 ---p 00000000 00:00 0 
+7f4ec7126000-7f4ec7224000 rw-p 00000000 00:00 0 
+7f4ec7224000-7f4ec7225000 r-xp 00000000 fd:00 77858535                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libjaas_unix.so
+7f4ec7225000-7f4ec7424000 ---p 00001000 fd:00 77858535                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libjaas_unix.so
+7f4ec7424000-7f4ec7425000 rw-p 00000000 fd:00 77858535                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libjaas_unix.so
+7f4ec7425000-7f4ec7448000 r-xp 00000000 fd:00 77202684                   /home/hive/env/hadoop-3.2.1/lib/native/libhadoop.so.1.0.0
+7f4ec7448000-7f4ec7647000 ---p 00023000 fd:00 77202684                   /home/hive/env/hadoop-3.2.1/lib/native/libhadoop.so.1.0.0
+7f4ec7647000-7f4ec7648000 r--p 00022000 fd:00 77202684                   /home/hive/env/hadoop-3.2.1/lib/native/libhadoop.so.1.0.0
+7f4ec7648000-7f4ec7649000 rw-p 00023000 fd:00 77202684                   /home/hive/env/hadoop-3.2.1/lib/native/libhadoop.so.1.0.0
+7f4ec7649000-7f4ec7849000 rw-p 00000000 00:00 0 
+7f4ec7849000-7f4ec784e000 r--s 002f9000 fd:00 77858338                   /home/hive/env/jdk1.8.0_131/jre/lib/charsets.jar
+7f4ec784e000-7f4ec7861000 r--s 00345000 fd:00 77858378                   /home/hive/env/jdk1.8.0_131/jre/lib/resources.jar
+7f4ec7861000-7f4ec7a61000 rw-p 00000000 00:00 0 
+7f4ec7a61000-7f4ec7a64000 ---p 00000000 00:00 0 
+7f4ec7a64000-7f4ec7b62000 rw-p 00000000 00:00 0 
+7f4ec7b62000-7f4ec7b65000 ---p 00000000 00:00 0 
+7f4ec7b65000-7f4ec7d9b000 rw-p 00000000 00:00 0 
+7f4ec7d9b000-7f4ec7da0000 r--s 0009a000 fd:00 77858392                   /home/hive/env/jdk1.8.0_131/jre/lib/jsse.jar
+7f4ec7da0000-7f4ec7fa0000 rw-p 00000000 00:00 0 
+7f4ec7fa0000-7f4ec7fb1000 r-xp 00000000 fd:00 77858552                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libnio.so
+7f4ec7fb1000-7f4ec81b0000 ---p 00011000 fd:00 77858552                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libnio.so
+7f4ec81b0000-7f4ec81b1000 rw-p 00010000 fd:00 77858552                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libnio.so
+7f4ec81b1000-7f4ec81cc000 r--s 001d3000 fd:00 77858399                   /home/hive/env/jdk1.8.0_131/jre/lib/ext/nashorn.jar
+7f4ec81cc000-7f4ecb1cd000 rw-p 00000000 00:00 0 
+7f4ecb1cd000-7f4ecb1e3000 r-xp 00000000 fd:00 77858549                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libnet.so
+7f4ecb1e3000-7f4ecb3e3000 ---p 00016000 fd:00 77858549                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libnet.so
+7f4ecb3e3000-7f4ecb3e4000 rw-p 00016000 fd:00 77858549                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libnet.so
+7f4ecb3e4000-7f4ecb3ed000 r-xp 00000000 fd:00 77858557                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libmanagement.so
+7f4ecb3ed000-7f4ecb5ec000 ---p 00009000 fd:00 77858557                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libmanagement.so
+7f4ecb5ec000-7f4ecb5ed000 rw-p 00008000 fd:00 77858557                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libmanagement.so
+7f4ecb5ed000-7f4ecb5f1000 r--s 0002d000 fd:00 77990528                   /home/hive/env/tez-0.10.1/tez-jars/tez-runtime-internals-0.10.1-SNAPSHOT.jar
+7f4ecb5f1000-7f4ecb5f6000 r--s 00044000 fd:00 77990530                   /home/hive/env/tez-0.10.1/tez-jars/tez-mapreduce-0.10.1-SNAPSHOT.jar
+7f4ecb5f6000-7f4ecb5f9000 r--s 00024000 fd:00 77202959                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/hadoop-yarn-server-router-3.2.1.jar
+7f4ecb5f9000-7f4ecb5fc000 r--s 0001a000 fd:00 77202990                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/hadoop-yarn-submarine-3.2.1.jar
+7f4ecb5fc000-7f4ecb5fd000 r--s 0000a000 fd:00 77202866                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/hadoop-yarn-server-tests-3.2.1.jar
+7f4ecb5fd000-7f4ecb5ff000 r--s 00012000 fd:00 77202955                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/hadoop-yarn-server-web-proxy-3.2.1.jar
+7f4ecb5ff000-7f4ecb609000 r--s 00091000 fd:00 77202865                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/hadoop-yarn-services-core-3.2.1.jar
+7f4ecb609000-7f4ecb62d000 r--s 0020a000 fd:00 77202945                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-3.2.1.jar
+7f4ecb62d000-7f4ecb645000 r--s 0013d000 fd:00 77202956                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/hadoop-yarn-server-common-3.2.1.jar
+7f4ecb645000-7f4ecb672000 r--s 002f6000 fd:00 77202868                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/hadoop-yarn-api-3.2.1.jar
+7f4ecb672000-7f4ecb696000 r--s 002a5000 fd:00 77202870                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/hadoop-yarn-common-3.2.1.jar
+7f4ecb696000-7f4ecb698000 r--s 0001b000 fd:00 77202867                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-3.2.1.jar
+7f4ecb698000-7f4ecb69d000 r--s 00043000 fd:00 77202991                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-3.2.1.jar
+7f4ecb69d000-7f4ecb6a2000 r--s 00033000 fd:00 77202864                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/hadoop-yarn-registry-3.2.1.jar
+7f4ecb6a2000-7f4ecb6ba000 r--s 00137000 fd:00 77202962                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/hadoop-yarn-server-nodemanager-3.2.1.jar
+7f4ecb6ba000-7f4ecb6be000 r--s 0004b000 fd:00 77202869                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/hadoop-yarn-client-3.2.1.jar
+7f4ecb6be000-7f4ecb6c1000 r--s 00015000 fd:00 77202961                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-3.2.1.jar
+7f4ecb6c1000-7f4ecb6c3000 r--s 00019000 fd:00 77202992                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/hadoop-yarn-services-api-3.2.1.jar
+7f4ecb6c3000-7f4ecb6c4000 r--s 0000d000 fd:00 77202960                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-3.2.1.jar
+7f4ecb6c4000-7f4ecb6c6000 r--s 00015000 fd:00 77202993                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/hadoop-yarn-server-timeline-pluginstorage-3.2.1.jar
+7f4ecb6c6000-7f4ecb6d4000 r--s 00096000 fd:00 77202843                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/guice-4.0.jar
+7f4ecb6d4000-7f4ecb6d7000 r--s 0001e000 fd:00 77202844                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/jersey-client-1.19.jar
+7f4ecb6d7000-7f4ecb6da000 r--s 0001e000 fd:00 77202842                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/HikariCP-java7-2.4.12.jar
+7f4ecb6da000-7f4ecb732000 r--s 003a7000 fd:00 77202847                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/bcprov-jdk15on-1.60.jar
+7f4ecb732000-7f4ecb736000 r--s 0001e000 fd:00 77202850                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/metrics-core-3.2.4.jar
+7f4ecb736000-7f4ecb737000 r--s 00007000 fd:00 77202861                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/jackson-module-jaxb-annotations-2.9.8.jar
+7f4ecb737000-7f4ecb739000 r--s 00005000 fd:00 77202858                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/objenesis-1.0.jar
+7f4ecb739000-7f4ecb73b000 r--s 0000d000 fd:00 77202855                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/java-util-1.9.0.jar
+7f4ecb73b000-7f4ecb761000 r--s 00180000 fd:00 77202845                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/ehcache-3.3.1.jar
+7f4ecb761000-7f4ecb762000 r--s 00007000 fd:00 77202860                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/jackson-jaxrs-base-2.9.8.jar
+7f4ecb762000-7f4ecb775000 r--s 000b0000 fd:00 77202849                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/bcpkix-jdk15on-1.60.jar
+7f4ecb775000-7f4ecb77b000 r--s 0003c000 fd:00 77202846                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/snakeyaml-1.16.jar
+7f4ecb77b000-7f4ecb77c000 r--s 00003000 fd:00 77202859                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/jersey-guice-1.19.jar
+7f4ecb77c000-7f4ecb783000 r--s 00058000 fd:00 77202862                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/fst-2.50.jar
+7f4ecb783000-7f4ecb786000 r--s 0000b000 fd:00 77202854                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/geronimo-jcache_1.0_spec-1.0-alpha-1.jar
+7f4ecb786000-7f4ecb787000 r--s 00000000 fd:00 77202853                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/javax.inject-1.jar
+7f4ecb787000-7f4ecb789000 r--s 00011000 fd:00 77202851                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/json-io-2.5.1.jar
+7f4ecb789000-7f4ecb78a000 r--s 00003000 fd:00 77202863                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/jackson-jaxrs-json-provider-2.9.8.jar
+7f4ecb78a000-7f4ecb78c000 r--s 00000000 fd:00 77202856                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/aopalliance-1.0.jar
+7f4ecb78c000-7f4ecb795000 r--s 000b9000 fd:00 77202848                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/mssql-jdbc-6.2.1.jre7.jar
+7f4ecb795000-7f4ecb797000 r--s 00011000 fd:00 77202852                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/guice-servlet-4.0.jar
+7f4ecb797000-7f4ecb798000 r--s 00003000 fd:00 77202857                   /home/hive/env/hadoop-3.2.1/share/hadoop/yarn/lib/swagger-annotations-1.5.4.jar
+7f4ecb798000-7f4ecb7a5000 r--s 000b8000 fd:00 77202998                   /home/hive/env/hadoop-3.2.1/share/hadoop/mapreduce/hadoop-mapreduce-client-common-3.2.1.jar
+7f4ecb7a5000-7f4ecb7aa000 r--s 0003f000 fd:00 77203006                   /home/hive/env/hadoop-3.2.1/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar
+7f4ecb7aa000-7f4ecb7c2000 r--s 0017e000 fd:00 77203000                   /home/hive/env/hadoop-3.2.1/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.2.1-tests.jar
+7f4ecb7c2000-7f4ecb7cc000 r--s 0008c000 fd:00 77203031                   /home/hive/env/hadoop-3.2.1/share/hadoop/mapreduce/hadoop-mapreduce-client-app-3.2.1.jar
+7f4ecb7cc000-7f4ecb7cd000 r--s 00014000 fd:00 77203002                   /home/hive/env/hadoop-3.2.1/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.2.1.jar
+7f4ecb7cd000-7f4ecb7e6000 r--s 0017c000 fd:00 77203001                   /home/hive/env/hadoop-3.2.1/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.2.1.jar
+7f4ecb7e6000-7f4ecb7e8000 r--s 0000a000 fd:00 77203029                   /home/hive/env/hadoop-3.2.1/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-3.2.1.jar
+7f4ecb7e8000-7f4ecb7ea000 r--s 0000d000 fd:00 77202999                   /home/hive/env/hadoop-3.2.1/share/hadoop/mapreduce/hadoop-mapreduce-client-uploader-3.2.1.jar
+7f4ecb7ea000-7f4ecb7ed000 r--s 0001c000 fd:00 77203032                   /home/hive/env/hadoop-3.2.1/share/hadoop/mapreduce/hadoop-mapreduce-client-nativetask-3.2.1.jar
+7f4ecb7ed000-7f4ecb7ee000 r--s 00017000 fd:00 77203055                   /home/hive/env/hadoop-3.2.1/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-3.2.1.jar
+7f4ecb7ee000-7f4ecb7f1000 r--s 00032000 fd:00 77203035                   /home/hive/env/hadoop-3.2.1/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-3.2.1.jar
+7f4ecb7f1000-7f4ecb7f3000 r--s 00009000 fd:00 77202997                   /home/hive/env/hadoop-3.2.1/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar
+7f4ecb7f3000-7f4ecb7f9000 r--s 00036000 fd:00 77202996                   /home/hive/env/hadoop-3.2.1/share/hadoop/mapreduce/lib/junit-4.11.jar
+7f4ecb7f9000-7f4ecb7fb000 r--s 0000a000 fd:00 77203367                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/hadoop-hdfs-native-client-3.2.1-tests.jar
+7f4ecb7fb000-7f4ecb843000 r--s 00567000 fd:00 77203379                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/hadoop-hdfs-3.2.1.jar
+7f4ecb843000-7f4ecb888000 r--s 00497000 fd:00 77203378                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/hadoop-hdfs-client-3.2.1.jar
+7f4ecb888000-7f4ecb88e000 r--s 0003c000 fd:00 77203269                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/hadoop-hdfs-httpfs-3.2.1.jar
+7f4ecb88e000-7f4ecb89e000 r--s 000db000 fd:00 77203270                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/hadoop-hdfs-rbf-3.2.1.jar
+7f4ecb89e000-7f4ecb8a0000 r--s 00023000 fd:00 77203243                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/hadoop-hdfs-nfs-3.2.1.jar
+7f4ecb8a0000-7f4ecb8a4000 r--s 00024000 fd:00 77203368                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/hadoop-hdfs-client-3.2.1-tests.jar
+7f4ecb8a4000-7f4ecb8a8000 r--s 00043000 fd:00 77203246                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/hadoop-hdfs-rbf-3.2.1-tests.jar
+7f4ecb8a8000-7f4ecb8dc000 r--s 0053b000 fd:00 77203244                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/hadoop-hdfs-3.2.1-tests.jar
+7f4ecb8dc000-7f4ecb8de000 r--s 0000a000 fd:00 77203245                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/hadoop-hdfs-native-client-3.2.1.jar
+7f4ecb8de000-7f4ecb8df000 r--s 00004000 fd:00 77203237                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/kerb-identity-1.0.1.jar
+7f4ecb8df000-7f4ecb8e1000 r--s 0000f000 fd:00 77203165                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/okio-1.6.0.jar
+7f4ecb8e1000-7f4ecb8e5000 r--s 00025000 fd:00 77203241                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jersey-json-1.19.jar
+7f4ecb8e5000-7f4ecb8e9000 r--s 00024000 fd:00 77203172                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/stax2-api-3.1.4.jar
+7f4ecb8e9000-7f4ecb8f3000 r--s 00061000 fd:00 77203236                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jersey-core-1.19.jar
+7f4ecb8f3000-7f4ecb8f8000 r--s 00038000 fd:00 77203227                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/commons-beanutils-1.9.3.jar
+7f4ecb8f8000-7f4ecb8fc000 r--s 00029000 fd:00 77203188                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/commons-text-1.4.jar
+7f4ecb8fc000-7f4ecb919000 r--s 0016a000 fd:00 77203176                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/commons-math3-3.1.1.jar
+7f4ecb919000-7f4ecb91c000 r--s 0000e000 fd:00 77203185                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jackson-annotations-2.9.8.jar
+7f4ecb91c000-7f4ecb91e000 r--s 00020000 fd:00 77203224                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/hadoop-auth-3.2.1.jar
+7f4ecb91e000-7f4ecb91f000 r--s 00004000 fd:00 77203220                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jackson-jaxrs-1.9.13.jar
+7f4ecb91f000-7f4ecb921000 r--s 00000000 fd:00 77203163                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jcip-annotations-1.0-1.jar
+7f4ecb921000-7f4ecb923000 r--s 0000f000 fd:00 77203167                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jettison-1.1.jar
+7f4ecb923000-7f4ecb927000 r--s 00035000 fd:00 77203182                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar
+7f4ecb927000-7f4ecb92b000 r--s 0004c000 fd:00 77203229                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jackson-core-2.9.8.jar
+7f4ecb92b000-7f4ecb92e000 r--s 00012000 fd:00 77203202                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/kerb-server-1.0.1.jar
+7f4ecb92e000-7f4ecb930000 r--s 00002000 fd:00 77203225                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/error_prone_annotations-2.2.0.jar
+7f4ecb930000-7f4ecb936000 r--s 00044000 fd:00 77203213                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/nimbus-jose-jwt-4.41.1.jar
+7f4ecb936000-7f4ecb93e000 r--s 0003e000 fd:00 77203162                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/curator-recipes-2.13.0.jar
+7f4ecb93e000-7f4ecb940000 r--s 00017000 fd:00 77203178                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/kerby-asn1-1.0.1.jar
+7f4ecb940000-7f4ecb943000 r--s 00016000 fd:00 77203191                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jaxb-api-2.2.11.jar
+7f4ecb943000-7f4ecb949000 r--s 00046000 fd:00 77203177                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/commons-net-3.6.jar
+7f4ecb949000-7f4ecb963000 r--s 00155000 fd:00 77203232                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/htrace-core4-4.1.0-incubating.jar
+7f4ecb963000-7f4ecb967000 r--s 00019000 fd:00 77203171                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/kerb-crypto-1.0.1.jar
+7f4ecb967000-7f4ecb974000 r--s 00083000 fd:00 77203157                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/commons-collections-3.2.2.jar
+7f4ecb974000-7f4ecb986000 r--s 00137000 fd:00 77203230                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jackson-databind-2.9.8.jar
+7f4ecb986000-7f4ecb988000 r--s 00009000 fd:00 77203209                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/commons-cli-1.2.jar
+7f4ecb988000-7f4ecb98c000 r--s 0002f000 fd:00 77203152                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/commons-io-2.5.jar
+7f4ecb98c000-7f4ecb9a5000 r--s 0012c000 fd:00 77203212                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/netty-3.10.5.Final.jar
+7f4ecb9a5000-7f4ecb9a7000 r--s 00006000 fd:00 77203173                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/kerby-xdr-1.0.1.jar
+7f4ecb9a7000-7f4ecb9a8000 r--s 00006000 fd:00 77203168                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jackson-xc-1.9.13.jar
+7f4ecb9a8000-7f4ecb9b5000 r--s 000af000 fd:00 77203200                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/httpclient-4.5.6.jar
+7f4ecb9b5000-7f4ecb9b8000 r--s 000fd000 fd:00 77203217                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar
+7f4ecb9b8000-7f4ecb9b9000 r--s 00000000 fd:00 77203150                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/animal-sniffer-annotations-1.17.jar
+7f4ecb9b9000-7f4ecb9bb000 r--s 00006000 fd:00 77203166                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/paranamer-2.3.jar
+7f4ecb9bb000-7f4ecb9bc000 r--s 00004000 fd:00 77203195                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/token-provider-1.0.1.jar
+7f4ecb9bc000-7f4ecb9c2000 r--s 0002c000 fd:00 77203156                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/curator-framework-2.13.0.jar
+7f4ecb9c2000-7f4ecb9c9000 r--s 0002b000 fd:00 77203184                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/kerby-pkix-1.0.1.jar
+7f4ecb9c9000-7f4ecb9ca000 r--s 00005000 fd:00 77203199                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/json-simple-1.1.1.jar
+7f4ecb9ca000-7f4ecb9cc000 r--s 0000e000 fd:00 77203226                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar
+7f4ecb9cc000-7f4ecb9d5000 r--s 00062000 fd:00 77203207                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/avro-1.7.7.jar
+7f4ecb9d5000-7f4ecba0c000 r--s 00219000 fd:00 77203164                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/curator-client-2.13.0.jar
+7f4ecba0c000-7f4ecba0d000 r--s 00000000 fd:00 77203186                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+7f4ecba0d000-7f4ecba0f000 r--s 00006000 fd:00 77203180                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/kerby-config-1.0.1.jar
+7f4ecba0f000-7f4ecba10000 r--s 00004000 fd:00 77203169                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/audience-annotations-0.5.0.jar
+7f4ecba10000-7f4ecba11000 r--s 00008000 fd:00 77203204                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/kerb-util-1.0.1.jar
+7f4ecba11000-7f4ecba13000 r--s 0000e000 fd:00 77203170                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/kerb-common-1.0.1.jar
+7f4ecba13000-7f4ecba15000 r--s 00001000 fd:00 77203159                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/j2objc-annotations-1.1.jar
+7f4ecba15000-7f4ecba17000 r--s 00008000 fd:00 77203240                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jetty-util-ajax-9.3.24.v20180605.jar
+7f4ecba17000-7f4ecba49000 r--s 0026d000 fd:00 77203233                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/guava-27.0-jre.jar
+7f4ecba49000-7f4ecba4e000 r--s 0002a000 fd:00 77203216                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/gson-2.2.4.jar
+7f4ecba4e000-7f4ecba51000 r--s 00011000 fd:00 77203208                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/kerb-admin-1.0.1.jar
+7f4ecba51000-7f4ecba54000 r--s 00006000 fd:00 77203179                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jsr305-3.0.0.jar
+7f4ecba54000-7f4ecba5c000 r--s 00072000 fd:00 77203197                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/commons-lang3-3.7.jar
+7f4ecba5c000-7f4ecba5f000 r--s 0001b000 fd:00 77203228                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jetty-servlet-9.3.24.v20180605.jar
+7f4ecba5f000-7f4ecba6d000 r--s 000b1000 fd:00 77203203                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar
+7f4ecba6d000-7f4ecba71000 r--s 0001c000 fd:00 77203153                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jersey-servlet-1.19.jar
+7f4ecba71000-7f4ecba72000 r--s 00000000 fd:00 77203235                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/failureaccess-1.0.jar
+7f4ecba72000-7f4ecba74000 r--s 0000a000 fd:00 77203221                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jsr311-api-1.1.1.jar
+7f4ecba74000-7f4ecba75000 r--s 0000e000 fd:00 77203231                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/hadoop-annotations-3.2.1.jar
+7f4ecba75000-7f4ecba77000 r--s 00006000 fd:00 77203151                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/accessors-smart-1.2.jar
+7f4ecba77000-7f4ecba7e000 r--s 00069000 fd:00 77203189                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jetty-util-9.3.24.v20180605.jar
+7f4ecba7e000-7f4ecba85000 r--s 0004b000 fd:00 77203239                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/commons-codec-1.11.jar
+7f4ecba85000-7f4ecba8a000 r--s 00040000 fd:00 77203154                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jsch-0.1.54.jar
+7f4ecba8a000-7f4ecba8c000 r--s 0000c000 fd:00 77203214                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/asm-5.0.4.jar
+7f4ecba8c000-7f4ecba8f000 r--s 00015000 fd:00 77203206                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jetty-security-9.3.24.v20180605.jar
+7f4ecba8f000-7f4ecba9c000 r--s 000d1000 fd:00 77203190                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/zookeeper-3.4.13.jar
+7f4ecba9c000-7f4ecba9d000 r--s 00004000 fd:00 77203155                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/kerb-simplekdc-1.0.1.jar
+7f4ecba9d000-7f4ecbaa9000 r--s 0008b000 fd:00 77203193                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/commons-configuration2-2.1.1.jar
+7f4ecbaa9000-7f4ecbaac000 r--s 0001b000 fd:00 77203187                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/json-smart-2.3.jar
+7f4ecbaac000-7f4ecbab5000 r--s 0006f000 fd:00 77203205                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/log4j-1.2.17.jar
+7f4ecbab5000-7f4ecbac5000 r--s 0009c000 fd:00 77203161                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jersey-server-1.19.jar
+7f4ecbac5000-7f4ecbac8000 r--s 00019000 fd:00 77203198                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/kerb-client-1.0.1.jar
+7f4ecbac8000-7f4ecbacb000 r--s 00022000 fd:00 77203210                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jetty-http-9.3.24.v20180605.jar
+7f4ecbacb000-7f4ecbad6000 r--s 00086000 fd:00 77203183                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/commons-compress-1.18.jar
+7f4ecbad6000-7f4ecbade000 r--s 00078000 fd:00 77203215                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jetty-server-9.3.24.v20180605.jar
+7f4ecbade000-7f4ecbadf000 r--s 0000c000 fd:00 77203196                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jetty-xml-9.3.24.v20180605.jar
+7f4ecbadf000-7f4ecbae0000 r--s 00009000 fd:00 77203181                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/kerby-util-1.0.1.jar
+7f4ecbae0000-7f4ecbae5000 r--s 00047000 fd:00 77203158                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/dnsjava-2.1.7.jar
+7f4ecbae5000-7f4ecbae7000 r--s 0001e000 fd:00 77203218                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/re2j-1.1.jar
+7f4ecbae7000-7f4ecbb0e000 r--s 00205000 fd:00 77203238                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/netty-all-4.0.52.Final.jar
+7f4ecbb0e000-7f4ecbb18000 r--s 00026000 fd:00 77203242                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/checker-qual-2.5.2.jar
+7f4ecbb18000-7f4ecbb1d000 r--s 0004c000 fd:00 77203174                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/okhttp-2.7.5.jar
+7f4ecbb1d000-7f4ecbb24000 r--s 00049000 fd:00 77203201                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/httpcore-4.4.10.jar
+7f4ecbb24000-7f4ecbb27000 r--s 0001a000 fd:00 77203223                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jetty-webapp-9.3.24.v20180605.jar
+7f4ecbb27000-7f4ecbb28000 r--s 00005000 fd:00 77203175                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar
+7f4ecbb28000-7f4ecbb2e000 r--s 00078000 fd:00 77203211                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/woodstox-core-5.0.3.jar
+7f4ecbb2e000-7f4ecbb36000 r--s 0007b000 fd:00 77203160                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar
+7f4ecbb36000-7f4ecbb3d000 r--s 00031000 fd:00 77203222                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/kerb-core-1.0.1.jar
+7f4ecbb3d000-7f4ecbb50000 r--s 000c7000 fd:00 77203234                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jaxb-impl-2.2.3-1.jar
+7f4ecbb50000-7f4ecbb52000 r--s 00130000 fd:00 77203192                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/snappy-java-1.0.5.jar
+7f4ecbb52000-7f4ecbb55000 r--s 00015000 fd:00 77203219                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/javax.servlet-api-3.1.0.jar
+7f4ecbb55000-7f4ecbb58000 r--s 0001b000 fd:00 77203194                   /home/hive/env/hadoop-3.2.1/share/hadoop/hdfs/lib/jetty-io-9.3.24.v20180605.jar
+7f4ecbb58000-7f4ecbb5a000 r--s 0001e000 fd:00 77203477                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/hadoop-kms-3.2.1.jar
+7f4ecbb5a000-7f4ecbb5f000 r--s 0002d000 fd:00 77203507                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/hadoop-nfs-3.2.1.jar
+7f4ecbb5f000-7f4ecbb6c000 r--s 000b5000 fd:00 77990529                   /home/hive/env/tez-0.10.1/tez-jars/tez-runtime-library-0.10.1-SNAPSHOT.jar
+7f4ecbb6c000-7f4ecbbaa000 r--s 003b5000 fd:00 77203502                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/hadoop-common-3.2.1.jar
+7f4ecbbaa000-7f4ecbbd5000 r--s 0029d000 fd:00 77203506                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/hadoop-common-3.2.1-tests.jar
+7f4ecbbd5000-7f4ecbbd6000 r--s 00004000 fd:00 77203473                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/kerb-identity-1.0.1.jar
+7f4ecbbd6000-7f4ecbbda000 r--s 00025000 fd:00 77203475                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jersey-json-1.19.jar
+7f4ecbbda000-7f4ecbbde000 r--s 00024000 fd:00 77203407                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/stax2-api-3.1.4.jar
+7f4ecbbde000-7f4ecbbe8000 r--s 00061000 fd:00 77203472                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jersey-core-1.19.jar
+7f4ecbbe8000-7f4ecbbed000 r--s 00038000 fd:00 77203461                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/commons-beanutils-1.9.3.jar
+7f4ecbbed000-7f4ecbbf1000 r--s 00029000 fd:00 77203422                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/commons-text-1.4.jar
+7f4ecbbf1000-7f4ecbc0e000 r--s 0016a000 fd:00 77203409                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/commons-math3-3.1.1.jar
+7f4ecbc0e000-7f4ecbc11000 r--s 0000e000 fd:00 77203418                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jackson-annotations-2.9.8.jar
+7f4ecbc11000-7f4ecbc13000 r--s 00020000 fd:00 77203458                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/hadoop-auth-3.2.1.jar
+7f4ecbc13000-7f4ecbc14000 r--s 00004000 fd:00 77203454                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar
+7f4ecbc14000-7f4ecbc16000 r--s 00000000 fd:00 77203399                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jcip-annotations-1.0-1.jar
+7f4ecbc16000-7f4ecbc18000 r--s 0000f000 fd:00 77203402                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jettison-1.1.jar
+7f4ecbc18000-7f4ecbc1c000 r--s 00035000 fd:00 77203415                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar
+7f4ecbc1c000-7f4ecbc20000 r--s 0004c000 fd:00 77203464                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jackson-core-2.9.8.jar
+7f4ecbc20000-7f4ecbc23000 r--s 00012000 fd:00 77203436                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/kerb-server-1.0.1.jar
+7f4ecbc23000-7f4ecbc25000 r--s 00002000 fd:00 77203459                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/error_prone_annotations-2.2.0.jar
+7f4ecbc25000-7f4ecbc2b000 r--s 00044000 fd:00 77203448                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/nimbus-jose-jwt-4.41.1.jar
+7f4ecbc2b000-7f4ecbc2d000 r--s 00009000 fd:00 77203438                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/slf4j-api-1.7.25.jar
+7f4ecbc2d000-7f4ecbc35000 r--s 0003e000 fd:00 77203398                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/curator-recipes-2.13.0.jar
+7f4ecbc35000-7f4ecbc37000 r--s 00000000 fd:00 77203470                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jul-to-slf4j-1.7.25.jar
+7f4ecbc37000-7f4ecbc39000 r--s 00017000 fd:00 77203411                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/kerby-asn1-1.0.1.jar
+7f4ecbc39000-7f4ecbc3d000 r--s 0001e000 fd:00 77203423                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/metrics-core-3.2.4.jar
+7f4ecbc3d000-7f4ecbc40000 r--s 00016000 fd:00 77203426                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jaxb-api-2.2.11.jar
+7f4ecbc40000-7f4ecbc46000 r--s 00046000 fd:00 77203410                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/commons-net-3.6.jar
+7f4ecbc46000-7f4ecbc60000 r--s 00155000 fd:00 77203467                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/htrace-core4-4.1.0-incubating.jar
+7f4ecbc60000-7f4ecbc64000 r--s 00019000 fd:00 77203406                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/kerb-crypto-1.0.1.jar
+7f4ecbc64000-7f4ecbc71000 r--s 00083000 fd:00 77203393                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/commons-collections-3.2.2.jar
+7f4ecbc71000-7f4ecbc83000 r--s 00137000 fd:00 77203465                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jackson-databind-2.9.8.jar
+7f4ecbc83000-7f4ecbc85000 r--s 00009000 fd:00 77203444                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/commons-cli-1.2.jar
+7f4ecbc85000-7f4ecbc89000 r--s 0002f000 fd:00 77203388                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/commons-io-2.5.jar
+7f4ecbc89000-7f4ecbca2000 r--s 0012c000 fd:00 77203447                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/netty-3.10.5.Final.jar
+7f4ecbca2000-7f4ecbca4000 r--s 00006000 fd:00 77203408                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/kerby-xdr-1.0.1.jar
+7f4ecbca4000-7f4ecbca5000 r--s 00006000 fd:00 77203403                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jackson-xc-1.9.13.jar
+7f4ecbca5000-7f4ecbcb2000 r--s 000af000 fd:00 77203434                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/httpclient-4.5.6.jar
+7f4ecbcb2000-7f4ecbcb3000 r--s 00000000 fd:00 77203386                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/animal-sniffer-annotations-1.17.jar
+7f4ecbcb3000-7f4ecbcb5000 r--s 00006000 fd:00 77203401                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/paranamer-2.3.jar
+7f4ecbcb5000-7f4ecbcb6000 r--s 00004000 fd:00 77203430                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/token-provider-1.0.1.jar
+7f4ecbcb6000-7f4ecbcbc000 r--s 0002c000 fd:00 77203392                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/curator-framework-2.13.0.jar
+7f4ecbcbc000-7f4ecbcc3000 r--s 0002b000 fd:00 77203417                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/kerby-pkix-1.0.1.jar
+7f4ecbcc3000-7f4ecbcc5000 r--s 0000e000 fd:00 77203460                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/commons-logging-1.1.3.jar
+7f4ecbcc5000-7f4ecbcce000 r--s 00062000 fd:00 77203442                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/avro-1.7.7.jar
+7f4ecbcce000-7f4ecbd05000 r--s 00219000 fd:00 77203400                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/curator-client-2.13.0.jar
+7f4ecbd05000-7f4ecbd06000 r--s 00000000 fd:00 77203419                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+7f4ecbd06000-7f4ecbd08000 r--s 00006000 fd:00 77203413                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/kerby-config-1.0.1.jar
+7f4ecbd08000-7f4ecbd09000 r--s 00004000 fd:00 77203404                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/audience-annotations-0.5.0.jar
+7f4ecbd09000-7f4ecbd0a000 r--s 00008000 fd:00 77203439                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/kerb-util-1.0.1.jar
+7f4ecbd0a000-7f4ecbd0c000 r--s 0000e000 fd:00 77203405                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/kerb-common-1.0.1.jar
+7f4ecbd0c000-7f4ecbd0e000 r--s 00001000 fd:00 77203395                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/j2objc-annotations-1.1.jar
+7f4ecbd0e000-7f4ecbd40000 r--s 0026d000 fd:00 77203468                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/guava-27.0-jre.jar
+7f4ecbd40000-7f4ecbd45000 r--s 0002a000 fd:00 77203451                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/gson-2.2.4.jar
+7f4ecbd45000-7f4ecbd48000 r--s 00011000 fd:00 77203443                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/kerb-admin-1.0.1.jar
+7f4ecbd48000-7f4ecbd4b000 r--s 00006000 fd:00 77203412                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jsr305-3.0.0.jar
+7f4ecbd4b000-7f4ecbd53000 r--s 00072000 fd:00 77203432                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/commons-lang3-3.7.jar
+7f4ecbd53000-7f4ecbd56000 r--s 0001b000 fd:00 77203462                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jetty-servlet-9.3.24.v20180605.jar
+7f4ecbd56000-7f4ecbd64000 r--s 000b1000 fd:00 77203437                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar
+7f4ecbd64000-7f4ecbd68000 r--s 0001c000 fd:00 77203389                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jersey-servlet-1.19.jar
+7f4ecbd68000-7f4ecbd69000 r--s 00000000 fd:00 77203471                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/failureaccess-1.0.jar
+7f4ecbd69000-7f4ecc000000 r--s 02422000 fd:00 84937002                   /home/hive/env/hive-3.1.0/lib/hive-exec-3.1.0.jar.bak
+7f4ecc000000-7f4eccdde000 rw-p 00000000 00:00 0 
+7f4eccdde000-7f4ed0000000 ---p 00000000 00:00 0 
+7f4ed0000000-7f4ed0002000 r--s 0000a000 fd:00 77203455                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jsr311-api-1.1.1.jar
+7f4ed0002000-7f4ed0003000 r--s 0000e000 fd:00 77203466                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/hadoop-annotations-3.2.1.jar
+7f4ed0003000-7f4ed0004000 r--s 00002000 fd:00 77203421                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar
+7f4ed0004000-7f4ed0006000 r--s 00006000 fd:00 77203387                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/accessors-smart-1.2.jar
+7f4ed0006000-7f4ed000d000 r--s 00069000 fd:00 77203424                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jetty-util-9.3.24.v20180605.jar
+7f4ed000d000-7f4ed0014000 r--s 0004b000 fd:00 77203474                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/commons-codec-1.11.jar
+7f4ed0014000-7f4ed0019000 r--s 00040000 fd:00 77203390                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jsch-0.1.54.jar
+7f4ed0019000-7f4ed001b000 r--s 0000c000 fd:00 77203449                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/asm-5.0.4.jar
+7f4ed001b000-7f4ed001e000 r--s 00015000 fd:00 77203441                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jetty-security-9.3.24.v20180605.jar
+7f4ed001e000-7f4ed002b000 r--s 000d1000 fd:00 77203425                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/zookeeper-3.4.13.jar
+7f4ed002b000-7f4ed002c000 r--s 00004000 fd:00 77203391                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/kerb-simplekdc-1.0.1.jar
+7f4ed002c000-7f4ed0038000 r--s 0008b000 fd:00 77203428                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/commons-configuration2-2.1.1.jar
+7f4ed0038000-7f4ed003b000 r--s 0001b000 fd:00 77203420                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/json-smart-2.3.jar
+7f4ed003b000-7f4ed0044000 r--s 0006f000 fd:00 77203440                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/log4j-1.2.17.jar
+7f4ed0044000-7f4ed0054000 r--s 0009c000 fd:00 77203397                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jersey-server-1.19.jar
+7f4ed0054000-7f4ed0057000 r--s 00019000 fd:00 77203433                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/kerb-client-1.0.1.jar
+7f4ed0057000-7f4ed005a000 r--s 00022000 fd:00 77203445                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jetty-http-9.3.24.v20180605.jar
+7f4ed005a000-7f4ed0065000 r--s 00086000 fd:00 77203416                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/commons-compress-1.18.jar
+7f4ed0065000-7f4ed006d000 r--s 00078000 fd:00 77203450                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jetty-server-9.3.24.v20180605.jar
+7f4ed006d000-7f4ed006e000 r--s 0000c000 fd:00 77203431                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jetty-xml-9.3.24.v20180605.jar
+7f4ed006e000-7f4ed006f000 r--s 00009000 fd:00 77203414                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/kerby-util-1.0.1.jar
+7f4ed006f000-7f4ed0074000 r--s 00047000 fd:00 77203394                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/dnsjava-2.1.7.jar
+7f4ed0074000-7f4ed0076000 r--s 0001e000 fd:00 77203452                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/re2j-1.1.jar
+7f4ed0076000-7f4ed0080000 r--s 00026000 fd:00 77203476                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/checker-qual-2.5.2.jar
+7f4ed0080000-7f4ed0087000 r--s 00049000 fd:00 77203435                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/httpcore-4.4.10.jar
+7f4ed0087000-7f4ed008a000 r--s 0001a000 fd:00 77203457                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jetty-webapp-9.3.24.v20180605.jar
+7f4ed008a000-7f4ed0090000 r--s 00078000 fd:00 77203446                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/woodstox-core-5.0.3.jar
+7f4ed0090000-7f4ed0098000 r--s 0007b000 fd:00 77203396                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/protobuf-java-2.5.0.jar
+7f4ed0098000-7f4ed009b000 r--s 00016000 fd:00 77203463                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jsp-api-2.1.jar
+7f4ed009b000-7f4ed00a2000 r--s 00031000 fd:00 77203456                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/kerb-core-1.0.1.jar
+7f4ed00a2000-7f4ed00b5000 r--s 000c7000 fd:00 77203469                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar
+7f4ed00b5000-7f4ed00b7000 r--s 00130000 fd:00 77203427                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/snappy-java-1.0.5.jar
+7f4ed00b7000-7f4ed00ba000 r--s 00015000 fd:00 77203453                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/javax.servlet-api-3.1.0.jar
+7f4ed00ba000-7f4ed00bd000 r--s 0001b000 fd:00 77203429                   /home/hive/env/hadoop-3.2.1/share/hadoop/common/lib/jetty-io-9.3.24.v20180605.jar
+7f4ed00bd000-7f4ed00c0000 r--s 0002b000 fd:00 77203071                   /home/hive/env/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-distcp-3.2.1.jar
+7f4ed00c0000-7f4ed00c2000 r--s 00006000 fd:00 84935881                   /home/hive/env/hive-3.1.0/lib/log4j-web-2.10.0.jar
+7f4ed00c2000-7f4ed00c3000 r--s 00005000 fd:00 84935827                   /home/hive/env/hive-3.1.0/lib/log4j-slf4j-impl-2.10.0.jar
+7f4ed00c3000-7f4ed00e4000 r--s 00166000 fd:00 84935829                   /home/hive/env/hive-3.1.0/lib/log4j-core-2.10.0.jar
+7f4ed00e4000-7f4ed00ea000 r--s 00039000 fd:00 84935828                   /home/hive/env/hive-3.1.0/lib/log4j-api-2.10.0.jar
+7f4ed00ea000-7f4ed00ec000 r--s 0000e000 fd:00 84935880                   /home/hive/env/hive-3.1.0/lib/log4j-1.2-api-2.10.0.jar
+7f4ed00ec000-7f4ed00ee000 r--s 00001000 fd:00 77990524                   /home/hive/env/tez-0.10.1/tez-jars/hadoop-shim-0.10.1-SNAPSHOT.jar
+7f4ed00ee000-7f4ed00ef000 r--s 00001000 fd:00 77990542                   /home/hive/env/tez-0.10.1/tez-jars/hadoop-shim-2.8-0.10.1-SNAPSHOT.jar
+7f4ed00ef000-7f4ed00fd000 r--s 000f3000 fd:00 77990525                   /home/hive/env/tez-0.10.1/tez-jars/tez-api-0.10.1-SNAPSHOT.jar
+7f4ed00fd000-7f4ed00fe000 r--s 00001000 fd:00 77990526                   /home/hive/env/tez-0.10.1/tez-jars/tez-build-tools-0.10.1-SNAPSHOT.jar
+7f4ed00fe000-7f4ed0101000 r--s 00013000 fd:00 77990527                   /home/hive/env/tez-0.10.1/tez-jars/tez-common-0.10.1-SNAPSHOT.jar
+7f4ed0101000-7f4ed0116000 r--s 00148000 fd:00 77990532                   /home/hive/env/tez-0.10.1/tez-jars/tez-dag-0.10.1-SNAPSHOT.jar
+7f4ed0116000-7f4ed0117000 r--s 0000d000 fd:00 77990531                   /home/hive/env/tez-0.10.1/tez-jars/tez-examples-0.10.1-SNAPSHOT.jar
+7f4ed0117000-7f4ed0119000 r--s 00013000 fd:00 77990539                   /home/hive/env/tez-0.10.1/tez-jars/tez-history-parser-0.10.1-SNAPSHOT.jar
+7f4ed0119000-7f4ed011a000 r--s 00003000 fd:00 77990541                   /home/hive/env/tez-0.10.1/tez-jars/tez-javadoc-tools-0.10.1-SNAPSHOT.jar
+7f4ed011a000-7f4ed011c000 r--s 00013000 fd:00 77990540                   /home/hive/env/tez-0.10.1/tez-jars/tez-job-analyzer-0.10.1-SNAPSHOT.jar
+7f4ed011c000-7f4ed0121000 r--s 00044000 fd:00 78036897                   /home/hive/env/tez-0.10.1/tez-jars/tez-mapreduce-0.10.1-SNAPSHOT.jar.default
+7f4ed0121000-7f4ed0123000 r--s 00013000 fd:00 77990534                   /home/hive/env/tez-0.10.1/tez-jars/tez-protobuf-history-plugin-0.10.1-SNAPSHOT.jar
+7f4ed0123000-7f4ed0127000 r--s 0002d000 fd:00 78036898                   /home/hive/env/tez-0.10.1/tez-jars/tez-runtime-internals-0.10.1-SNAPSHOT.jar.default
+7f4ed0127000-7f4ed0135000 r--s 000b4000 fd:00 78036921                   /home/hive/env/tez-0.10.1/tez-jars/tez-runtime-library-0.10.1-SNAPSHOT.jar.default
+7f4ed0135000-7f4ed0138000 r--s 00024000 fd:00 77990533                   /home/hive/env/tez-0.10.1/tez-jars/tez-tests-0.10.1-SNAPSHOT.jar
+7f4ed0138000-7f4ed0139000 r--s 00002000 fd:00 77990537                   /home/hive/env/tez-0.10.1/tez-jars/tez-yarn-timeline-cache-plugin-0.10.1-SNAPSHOT.jar
+7f4ed0139000-7f4ed013a000 r--s 00006000 fd:00 77990535                   /home/hive/env/tez-0.10.1/tez-jars/tez-yarn-timeline-history-0.10.1-SNAPSHOT.jar
+7f4ed013a000-7f4ed013b000 r--s 00001000 fd:00 77990536                   /home/hive/env/tez-0.10.1/tez-jars/tez-yarn-timeline-history-with-acls-0.10.1-SNAPSHOT.jar
+7f4ed013b000-7f4ed013c000 r--s 00005000 fd:00 77990538                   /home/hive/env/tez-0.10.1/tez-jars/tez-yarn-timeline-history-with-fs-0.10.1-SNAPSHOT.jar
+7f4ed013c000-7f4ed0149000 r--s 000a9000 fd:00 77990556                   /home/hive/env/tez-0.10.1/tez-jars/lib/async-http-client-1.9.40.jar
+7f4ed0149000-7f4ed014b000 r--s 00009000 fd:00 77990560                   /home/hive/env/tez-0.10.1/tez-jars/lib/commons-cli-1.2.jar
+7f4ed014b000-7f4ed0152000 r--s 0004b000 fd:00 77990557                   /home/hive/env/tez-0.10.1/tez-jars/lib/commons-codec-1.11.jar
+7f4ed0152000-7f4ed0162000 r--s 000a8000 fd:00 77990549                   /home/hive/env/tez-0.10.1/tez-jars/lib/commons-collections4-4.1.jar
+7f4ed0162000-7f4ed0166000 r--s 0002a000 fd:00 77990546                   /home/hive/env/tez-0.10.1/tez-jars/lib/commons-io-2.4.jar
+7f4ed0166000-7f4ed016b000 r--s 00041000 fd:00 77990547                   /home/hive/env/tez-0.10.1/tez-jars/lib/commons-lang-2.6.jar
+7f4ed016b000-7f4ed0188000 r--s 0016a000 fd:00 77990561                   /home/hive/env/tez-0.10.1/tez-jars/lib/commons-math3-3.1.1.jar
+7f4ed0188000-7f4ed01ba000 r--s 0026d000 fd:00 77990545                   /home/hive/env/tez-0.10.1/tez-jars/lib/guava-27.0-jre.jar
+7f4ed01ba000-7f4ed01ff000 r--s 00497000 fd:00 77990554                   /home/hive/env/tez-0.10.1/tez-jars/lib/hadoop-hdfs-client-3.2.1.jar
+7f4ed01ff000-7f4ed020c000 r--s 000b8000 fd:00 77990559                   /home/hive/env/tez-0.10.1/tez-jars/lib/hadoop-mapreduce-client-common-3.2.1.jar
+7f4ed020c000-7f4ed0225000 r--s 0017c000 fd:00 77990558                   /home/hive/env/tez-0.10.1/tez-jars/lib/hadoop-mapreduce-client-core-3.2.1.jar
+7f4ed0225000-7f4ed0227000 r--s 00015000 fd:00 77990563                   /home/hive/env/tez-0.10.1/tez-jars/lib/hadoop-yarn-server-timeline-pluginstorage-3.2.1.jar
+7f4ed0227000-7f4ed022a000 r--s 00015000 fd:00 77990562                   /home/hive/env/tez-0.10.1/tez-jars/lib/javax.servlet-api-3.1.0.jar
+7f4ed022a000-7f4ed022d000 r--s 0001e000 fd:00 77990552                   /home/hive/env/tez-0.10.1/tez-jars/lib/jersey-client-1.19.jar
+7f4ed022d000-7f4ed0231000 r--s 00025000 fd:00 77990553                   /home/hive/env/tez-0.10.1/tez-jars/lib/jersey-json-1.19.jar
+7f4ed0231000-7f4ed0233000 r--s 00012000 fd:00 77990548                   /home/hive/env/tez-0.10.1/tez-jars/lib/jettison-1.3.4.jar
+7f4ed0233000-7f4ed0236000 r--s 00006000 fd:00 77990551                   /home/hive/env/tez-0.10.1/tez-jars/lib/jsr305-3.0.0.jar
+7f4ed0236000-7f4ed023a000 r--s 00018000 fd:00 77990564                   /home/hive/env/tez-0.10.1/tez-jars/lib/metrics-core-3.1.0.jar
+7f4ed023a000-7f4ed0242000 r--s 0007b000 fd:00 77990550                   /home/hive/env/tez-0.10.1/tez-jars/lib/protobuf-java-2.5.0.jar
+7f4ed0242000-7f4ed0245000 r--s 00030000 fd:00 77990555                   /home/hive/env/tez-0.10.1/tez-jars/lib/RoaringBitmap-0.5.21.jar
+7f4ed0245000-7f4ed0246000 r--s 00007000 fd:00 77990544                   /home/hive/env/tez-0.10.1/tez-jars/lib/slf4j-api-1.7.10.jar
+7f4ed0246000-7f4ed0252000 r--s 000b6000 fd:00 84935839                   /home/hive/env/hive-3.1.0/lib/zookeeper-3.4.6.jar
+7f4ed0252000-7f4ed0253000 r--s 00004000 fd:00 84936000                   /home/hive/env/hive-3.1.0/lib/websocket-servlet-9.3.20.v20170531.jar
+7f4ed0253000-7f4ed0255000 r--s 00007000 fd:00 84935996                   /home/hive/env/hive-3.1.0/lib/websocket-server-9.3.20.v20170531.jar
+7f4ed0255000-7f4ed0259000 r--s 0002b000 fd:00 84935997                   /home/hive/env/hive-3.1.0/lib/websocket-common-9.3.20.v20170531.jar
+7f4ed0259000-7f4ed025a000 r--s 00008000 fd:00 84935999                   /home/hive/env/hive-3.1.0/lib/websocket-client-9.3.20.v20170531.jar
+7f4ed025a000-7f4ed025d000 r--s 00009000 fd:00 84935998                   /home/hive/env/hive-3.1.0/lib/websocket-api-9.3.20.v20170531.jar
+7f4ed025d000-7f4ed0265000 r--s 00058000 fd:00 84935941                   /home/hive/env/hive-3.1.0/lib/velocity-1.5.jar
+7f4ed0265000-7f4ed0269000 r--s 0000c000 fd:00 84935978                   /home/hive/env/hive-3.1.0/lib/validation-api-1.1.0.Final.jar
+7f4ed0269000-7f4ed026a000 r--s 00003000 fd:00 84935915                   /home/hive/env/hive-3.1.0/lib/transaction-api-1.1.jar
+7f4ed026a000-7f4ed026d000 r--s 0000b000 fd:00 84935938                   /home/hive/env/hive-3.1.0/lib/tempus-fugit-1.1.jar
+7f4ed026d000-7f4ed026f000 r--s 00008000 fd:00 84936005                   /home/hive/env/hive-3.1.0/lib/taglibs-standard-spec-1.2.5.jar
+7f4ed026f000-7f4ed0274000 r--s 0002e000 fd:00 84936006                   /home/hive/env/hive-3.1.0/lib/taglibs-standard-impl-1.2.5.jar
+7f4ed0274000-7f4ed0277000 r--s 00014000 fd:00 84936009                   /home/hive/env/hive-3.1.0/lib/super-csv-2.2.0.jar
+7f4ed0277000-7f4ed0279000 r--s 00005000 fd:00 84935958                   /home/hive/env/hive-3.1.0/lib/stax-api-1.0.1.jar
+7f4ed0279000-7f4ed027d000 r--s 00036000 fd:00 84935946                   /home/hive/env/hive-3.1.0/lib/ST4-4.0.4.jar
+7f4ed027d000-7f4ed0281000 r--s 0001b000 fd:00 84935916                   /home/hive/env/hive-3.1.0/lib/sqlline-1.3.0.jar
+7f4ed0281000-7f4ed0284000 r--s 0016d000 fd:00 84935867                   /home/hive/env/hive-3.1.0/lib/snappy-java-1.1.4.jar
+7f4ed0284000-7f4ed028a000 r--s 0006a000 fd:00 84935952                   /home/hive/env/hive-3.1.0/lib/sketches-core-0.9.0.jar
+7f4ed028a000-7f4ed0292000 r--s 0007b000 fd:00 84935844                   /home/hive/env/hive-3.1.0/lib/protobuf-java-2.5.0.jar
+7f4ed0292000-7f4ed0294000 r--s 00001000 fd:00 84936018                   /home/hive/env/hive-3.1.0/lib/postgresql-metadata-storage-0.12.0.jar
+7f4ed0294000-7f4ed029b000 r--s 00097000 fd:00 84936019                   /home/hive/env/hive-3.1.0/lib/postgresql-9.4.1208.jre7.jar
+7f4ed029b000-7f4ed02e3000 r--s 0039f000 fd:00 84935902                   /home/hive/env/hive-3.1.0/lib/parquet-hadoop-bundle-1.10.0.jar
+7f4ed02e3000-7f4ed02e5000 r--s 00006000 fd:00 84935866                   /home/hive/env/hive-3.1.0/lib/paranamer-2.3.jar
+7f4ed02e5000-7f4ed02e6000 r--s 00004000 fd:00 84935975                   /home/hive/env/hive-3.1.0/lib/osgi-resource-locator-1.0.1.jar
+7f4ed02e6000-7f4ed02e8000 r--s 00005000 fd:00 84936032                   /home/hive/env/hive-3.1.0/lib/org.abego.treelayout.core-1.0.1.jar
+7f4ed02e8000-7f4ed02e9000 r--s 00006000 fd:00 84935874                   /home/hive/env/hive-3.1.0/lib/orc-shims-1.5.1.jar
+7f4ed02e9000-7f4ed02f3000 r--s 000bc000 fd:00 84935873                   /home/hive/env/hive-3.1.0/lib/orc-core-1.5.1.jar
+7f4ed02f3000-7f4ed02f4000 r--s 00004000 fd:00 84935901                   /home/hive/env/hive-3.1.0/lib/opencsv-2.3.jar
+7f4ed02f4000-7f4ed0301000 r--s 0007e000 fd:00 84935899                   /home/hive/env/hive-3.1.0/lib/netty-common-4.1.17.Final.jar
+7f4ed0301000-7f4ed0305000 r--s 0003f000 fd:00 84935898                   /home/hive/env/hive-3.1.0/lib/netty-buffer-4.1.17.Final.jar
+7f4ed0305000-7f4ed0346000 r--s 0035a000 fd:00 84935876                   /home/hive/env/hive-3.1.0/lib/netty-all-4.1.17.Final.jar
+7f4ed0346000-7f4ed035f000 r--s 0012c000 fd:00 84935841                   /home/hive/env/hive-3.1.0/lib/netty-3.10.5.Final.jar
+7f4ed035f000-7f4ed0360000 r--s 00002000 fd:00 84936017                   /home/hive/env/hive-3.1.0/lib/mysql-metadata-storage-0.12.0.jar
+7f4ed0360000-7f4ed0369000 r--s 000ed000 fd:00 84937027                   /home/hive/env/hive-3.1.0/lib/mysql-connector-java-5.1.47.jar
+7f4ed0369000-7f4ed036b000 r--s 00007000 fd:00 84935887                   /home/hive/env/hive-3.1.0/lib/metrics-jvm-3.1.0.jar
+7f4ed036b000-7f4ed036c000 r--s 00003000 fd:00 84935888                   /home/hive/env/hive-3.1.0/lib/metrics-json-3.1.0.jar
+7f4ed036c000-7f4ed0370000 r--s 00018000 fd:00 84935886                   /home/hive/env/hive-3.1.0/lib/metrics-core-3.1.0.jar
+7f4ed0370000-7f4ed0372000 r--s 00006000 fd:00 84935953                   /home/hive/env/hive-3.1.0/lib/memory-0.9.0.jar
+7f4ed0372000-7f4ed0378000 r--s 00034000 fd:00 84935832                   /home/hive/env/hive-3.1.0/lib/libthrift-0.9.3.jar
+7f4ed0378000-7f4ed037f000 r--s 00046000 fd:00 84935893                   /home/hive/env/hive-3.1.0/lib/libfb303-0.9.3.jar
+7f4ed037f000-7f4ed0380000 r--s 00003000 fd:00 84935936                   /home/hive/env/hive-3.1.0/lib/jta-1.1.jar
+7f4ed0380000-7f4ed0383000 r--s 00006000 fd:00 84935870                   /home/hive/env/hive-3.1.0/lib/jsr305-3.0.0.jar
+7f4ed0383000-7f4ed0385000 r--s 00005000 fd:00 84935885                   /home/hive/env/hive-3.1.0/lib/json-1.8.jar
+7f4ed0385000-7f4ed0386000 r--s 00002000 fd:00 84935884                   /home/hive/env/hive-3.1.0/lib/jpam-1.1.jar
+7f4ed0386000-7f4ed0389000 r--s 0002c000 fd:00 84935934                   /home/hive/env/hive-3.1.0/lib/joni-2.1.11.jar
+7f4ed0389000-7f4ed039a000 r--s 0008a000 fd:00 84935879                   /home/hive/env/hive-3.1.0/lib/joda-time-2.9.9.jar
+7f4ed039a000-7f4ed039e000 r--s 00031000 fd:00 84935840                   /home/hive/env/hive-3.1.0/lib/jline-2.12.jar
+7f4ed039e000-7f4ed03a0000 r--s 0000b000 fd:00 84935863                   /home/hive/env/hive-3.1.0/lib/jetty-xml-9.3.20.v20170531.jar
+7f4ed03a0000-7f4ed03a2000 r--s 0001a000 fd:00 84935862                   /home/hive/env/hive-3.1.0/lib/jetty-webapp-9.3.20.v20170531.jar
+7f4ed03a2000-7f4ed03aa000 r--s 00067000 fd:00 84935852                   /home/hive/env/hive-3.1.0/lib/jetty-util-9.3.20.v20170531.jar
+7f4ed03aa000-7f4ed03ad000 r--s 0001b000 fd:00 84935860                   /home/hive/env/hive-3.1.0/lib/jetty-servlet-9.3.20.v20170531.jar
+7f4ed03ad000-7f4ed03b4000 r--s 00079000 fd:00 84935857                   /home/hive/env/hive-3.1.0/lib/jetty-server-9.3.20.v20170531.jar
+7f4ed03b4000-7f4ed03b7000 r--s 00015000 fd:00 84935861                   /home/hive/env/hive-3.1.0/lib/jetty-security-9.3.20.v20170531.jar
+7f4ed03b7000-7f4ed03b9000 r--s 0002d000 fd:00 84936002                   /home/hive/env/hive-3.1.0/lib/jetty-schemas-3.1.jar
+7f4ed03b9000-7f4ed0404000 r--s 005b3000 fd:00 84935989                   /home/hive/env/hive-3.1.0/lib/jetty-runner-9.3.20.v20170531.jar
+7f4ed0404000-7f4ed0406000 r--s 00007000 fd:00 84935877                   /home/hive/env/hive-3.1.0/lib/jetty-rewrite-9.3.20.v20170531.jar
+7f4ed0406000-7f4ed0408000 r--s 0000c000 fd:00 84935990                   /home/hive/env/hive-3.1.0/lib/jetty-plus-9.3.20.v20170531.jar
+7f4ed0408000-7f4ed040a000 r--s 00009000 fd:00 84935991                   /home/hive/env/hive-3.1.0/lib/jetty-jndi-9.3.20.v20170531.jar
+7f4ed040a000-7f4ed040b000 r--s 00009000 fd:00 84935995                   /home/hive/env/hive-3.1.0/lib/jetty-jaas-9.3.20.v20170531.jar
+7f4ed040b000-7f4ed040f000 r--s 0001b000 fd:00 84935859                   /home/hive/env/hive-3.1.0/lib/jetty-io-9.3.20.v20170531.jar
+7f4ed040f000-7f4ed0412000 r--s 00022000 fd:00 84935858                   /home/hive/env/hive-3.1.0/lib/jetty-http-9.3.20.v20170531.jar
+7f4ed0412000-7f4ed0418000 r--s 0003b000 fd:00 84935878                   /home/hive/env/hive-3.1.0/lib/jetty-client-9.3.20.v20170531.jar
+7f4ed0418000-7f4ed041b000 r--s 00012000 fd:00 84935992                   /home/hive/env/hive-3.1.0/lib/jetty-annotations-9.3.20.v20170531.jar
+7f4ed041b000-7f4ed041d000 r--s 0000f000 fd:00 84935846                   /home/hive/env/hive-3.1.0/lib/jettison-1.1.jar
+7f4ed041d000-7f4ed0432000 r--s 000d1000 fd:00 84935964                   /home/hive/env/hive-3.1.0/lib/jersey-server-2.25.1.jar
+7f4ed0432000-7f4ed0434000 r--s 00010000 fd:00 84935977                   /home/hive/env/hive-3.1.0/lib/jersey-media-jaxb-2.25.1.jar
+7f4ed0434000-7f4ed044c000 r--s 000d6000 fd:00 84935968                   /home/hive/env/hive-3.1.0/lib/jersey-guava-2.25.1.jar
+7f4ed044c000-7f4ed044f000 r--s 0000e000 fd:00 84935979                   /home/hive/env/hive-3.1.0/lib/jersey-container-servlet-core-2.25.1.jar
+7f4ed044f000-7f4ed045d000 r--s 000a1000 fd:00 84935965                   /home/hive/env/hive-3.1.0/lib/jersey-common-2.25.1.jar
+7f4ed045d000-7f4ed0461000 r--s 00026000 fd:00 84935976                   /home/hive/env/hive-3.1.0/lib/jersey-client-2.25.1.jar
+7f4ed0461000-7f4ed0467000 r--s 0002c000 fd:00 84935935                   /home/hive/env/hive-3.1.0/lib/jdo-api-3.0.1.jar
+7f4ed0467000-7f4ed0469000 r--s 0000d000 fd:00 84936023                   /home/hive/env/hive-3.1.0/lib/jcommander-1.32.jar
+7f4ed0469000-7f4ed0478000 r--s 00178000 fd:00 84935933                   /home/hive/env/hive-3.1.0/lib/jcodings-1.0.18.jar
+7f4ed0478000-7f4ed0480000 r--s 00059000 fd:00 84935890                   /home/hive/env/hive-3.1.0/lib/javolution-5.5.1.jar
+7f4ed0480000-7f4ed0484000 r--s 00019000 fd:00 84935966                   /home/hive/env/hive-3.1.0/lib/javax.ws.rs-api-2.0.1.jar
+7f4ed0484000-7f4ed0486000 r--s 0000b000 fd:00 84935985                   /home/hive/env/hive-3.1.0/lib/javax.servlet.jsp-api-2.3.1.jar
+7f4ed0486000-7f4ed048d000 r--s 0007f000 fd:00 84935984                   /home/hive/env/hive-3.1.0/lib/javax.servlet.jsp-2.3.2.jar
+7f4ed048d000-7f4ed0490000 r--s 00015000 fd:00 84935843                   /home/hive/env/hive-3.1.0/lib/javax.servlet-api-3.1.0.jar
+7f4ed0490000-7f4ed0496000 r--s 00037000 fd:00 84935914                   /home/hive/env/hive-3.1.0/lib/javax.jdo-3.2.0-m3.jar
+7f4ed0496000-7f4ed0497000 r--s 00001000 fd:00 84935972                   /home/hive/env/hive-3.1.0/lib/javax.inject-2.5.0-b32.jar
+7f4ed0497000-7f4ed0499000 r--s 00005000 fd:00 84935967                   /home/hive/env/hive-3.1.0/lib/javax.annotation-api-1.2.jar
+7f4ed0499000-7f4ed04a3000 r--s 000ae000 fd:00 84935974                   /home/hive/env/hive-3.1.0/lib/javassist-3.20.0-GA.jar
+7f4ed04a3000-7f4ed04ac000 r--s 0008d000 fd:00 84935954                   /home/hive/env/hive-3.1.0/lib/janino-2.7.6.jar
+7f4ed04ac000-7f4ed04ae000 r--s 00004000 fd:00 84935986                   /home/hive/env/hive-3.1.0/lib/jamon-runtime-2.3.1.jar
+7f4ed04ae000-7f4ed04bc000 r--s 000b1000 fd:00 84935848                   /home/hive/env/hive-3.1.0/lib/jackson-mapper-asl-1.9.13.jar
+7f4ed04bc000-7f4ed04be000 r--s 00013000 fd:00 84936015                   /home/hive/env/hive-3.1.0/lib/jackson-dataformat-smile-2.9.5.jar
+7f4ed04be000-7f4ed04d1000 r--s 00135000 fd:00 84935855                   /home/hive/env/hive-3.1.0/lib/jackson-databind-2.9.5.jar
+7f4ed04d1000-7f4ed04d5000 r--s 00035000 fd:00 84935847                   /home/hive/env/hive-3.1.0/lib/jackson-core-asl-1.9.13.jar
+7f4ed04d5000-7f4ed04d9000 r--s 0004b000 fd:00 84935854                   /home/hive/env/hive-3.1.0/lib/jackson-core-2.9.5.jar
+7f4ed04d9000-7f4ed04dc000 r--s 0000e000 fd:00 84935849                   /home/hive/env/hive-3.1.0/lib/jackson-annotations-2.9.5.jar
+7f4ed04dc000-7f4ed04f2000 r--s 00124000 fd:00 84935947                   /home/hive/env/hive-3.1.0/lib/ivy-2.4.0.jar
+7f4ed04f2000-7f4ed04f9000 r--s 00049000 fd:00 84935834                   /home/hive/env/hive-3.1.0/lib/httpcore-4.4.4.jar
+7f4ed04f9000-7f4ed0506000 r--s 000a7000 fd:00 84935833                   /home/hive/env/hive-3.1.0/lib/httpclient-4.5.2.jar
+7f4ed0506000-7f4ed051f000 r--s 00152000 fd:00 84935922                   /home/hive/env/hive-3.1.0/lib/htrace-core-3.2.0-incubating.jar
+7f4ed051f000-7f4ed0540000 r--s 00177000 fd:00 84935900                   /home/hive/env/hive-3.1.0/lib/hppc-0.7.2.jar
+7f4ed0540000-7f4ed0543000 r--s 0001e000 fd:00 84935970                   /home/hive/env/hive-3.1.0/lib/hk2-utils-2.5.0-b32.jar
+7f4ed0543000-7f4ed0546000 r--s 0002b000 fd:00 84935973                   /home/hive/env/hive-3.1.0/lib/hk2-locator-2.5.0-b32.jar
+7f4ed0546000-7f4ed054c000 r--s 00028000 fd:00 84935969                   /home/hive/env/hive-3.1.0/lib/hk2-api-2.5.0-b32.jar
+7f4ed054c000-7f4ed054d000 r--s 0000a000 fd:00 84935940                   /home/hive/env/hive-3.1.0/lib/hive-vector-code-gen-3.1.0.jar
+7f4ed054d000-7f4ed054e000 r--s 00006000 fd:00 84935824                   /home/hive/env/hive-3.1.0/lib/hive-upgrade-acid-3.1.0.jar
+7f4ed054e000-7f4ed054f000 r--s 00003000 fd:00 84935937                   /home/hive/env/hive-3.1.0/lib/hive-testutils-3.1.0.jar
+7f4ed054f000-7f4ed0551000 r--s 0000e000 fd:00 84936033                   /home/hive/env/hive-3.1.0/lib/hive-streaming-3.1.0.jar
+7f4ed0551000-7f4ed0555000 r--s 00035000 fd:00 84935872                   /home/hive/env/hive-3.1.0/lib/hive-storage-api-2.7.0.jar
+7f4ed0555000-7f4ed061e000 r--s 009cc000 fd:00 84935904                   /home/hive/env/hive-3.1.0/lib/hive-standalone-metastore-3.1.0.jar
+7f4ed061e000-7f4ed061f000 r--s 00003000 fd:00 84935871                   /home/hive/env/hive-3.1.0/lib/hive-shims-scheduler-3.1.0.jar
+7f4ed061f000-7f4ed0621000 r--s 0000e000 fd:00 84935826                   /home/hive/env/hive-3.1.0/lib/hive-shims-common-3.1.0.jar
+7f4ed0621000-7f4ed0622000 r--s 00002000 fd:00 84935825                   /home/hive/env/hive-3.1.0/lib/hive-shims-3.1.0.jar
+7f4ed0622000-7f4ed0624000 r--s 0000c000 fd:00 84935842                   /home/hive/env/hive-3.1.0/lib/hive-shims-0.23-3.1.0.jar
+7f4ed0624000-7f4ed0643000 r--s 0017b000 fd:00 84935892                   /home/hive/env/hive-3.1.0/lib/hive-service-rpc-3.1.0.jar
+7f4ed0643000-7f4ed064b000 r--s 00083000 fd:00 84935959                   /home/hive/env/hive-3.1.0/lib/hive-service-3.1.0.jar
+7f4ed064b000-7f4ed065f000 r--s 000e8000 fd:00 84935891                   /home/hive/env/hive-3.1.0/lib/hive-serde-3.1.0.jar
+7f4ed065f000-7f4ed0660000 r--s 00008000 fd:00 84935903                   /home/hive/env/hive-3.1.0/lib/hive-metastore-3.1.0.jar
+7f4ed0660000-7f4ed0662000 r--s 0001d000 fd:00 84935942                   /home/hive/env/hive-3.1.0/lib/hive-llap-tez-3.1.0.jar
+7f4ed0662000-7f4ed066d000 r--s 000b5000 fd:00 84935960                   /home/hive/env/hive-3.1.0/lib/hive-llap-server-3.1.0.jar
+7f4ed066d000-7f4ed066e000 r--s 00009000 fd:00 84936029                   /home/hive/env/hive-3.1.0/lib/hive-llap-ext-client-3.1.0.jar
+7f4ed066e000-7f4ed066f000 r--s 00006000 fd:00 84935961                   /home/hive/env/hive-3.1.0/lib/hive-llap-common-3.1.0-tests.jar
+7f4ed066f000-7f4ed0677000 r--s 00060000 fd:00 84935944                   /home/hive/env/hive-3.1.0/lib/hive-llap-common-3.1.0.jar
+7f4ed0677000-7f4ed067a000 r--s 0001f000 fd:00 84935943                   /home/hive/env/hive-3.1.0/lib/hive-llap-client-3.1.0.jar
+7f4ed067a000-7f4ed067b000 r--s 00004000 fd:00 84936034                   /home/hive/env/hive-3.1.0/lib/hive-kryo-registrator-3.1.0.jar
+7f4ed067b000-7f4ed067d000 r--s 0000b000 fd:00 84936020                   /home/hive/env/hive-3.1.0/lib/hive-jdbc-handler-3.1.0.jar
+7f4ed067d000-7f4ed067f000 r--s 0001d000 fd:00 84936007                   /home/hive/env/hive-3.1.0/lib/hive-jdbc-3.1.0.jar
+7f4ed067f000-7f4ed0688000 r--s 000a0000 fd:00 84936030                   /home/hive/env/hive-3.1.0/lib/hive-hplsql-3.1.0.jar
+7f4ed0688000-7f4ed068a000 r--s 00011000 fd:00 84936038                   /home/hive/env/hive-3.1.0/lib/hive-hcatalog-server-extensions-3.1.0.jar
+7f4ed068a000-7f4ed068e000 r--s 0003e000 fd:00 84936037                   /home/hive/env/hive-3.1.0/lib/hive-hcatalog-core-3.1.0.jar
+7f4ed068e000-7f4ed0690000 r--s 0001b000 fd:00 84936012                   /home/hive/env/hive-3.1.0/lib/hive-hbase-handler-3.1.0.jar
+7f4ed0690000-7f4ed06e3000 rw-p 00000000 00:00 0 
+7f4ed06e3000-7f4ed0950000 r--s 0221f000 fd:00 103418162                  /home/hive/env/hive-3.1.0/lib/hive-exec-3.1.0.jar
+7f4ed0950000-7f4ed09c6000 rw-p 00000000 00:00 0 
+7f4ed09c6000-7f4ed0d0e000 r--s 02dcb000 fd:00 84936014                   /home/hive/env/hive-3.1.0/lib/hive-druid-handler-3.1.0.jar
+7f4ed0d0e000-7f4ed0d12000 r--s 0001b000 fd:00 84936011                   /home/hive/env/hive-3.1.0/lib/hive-contrib-3.1.0.jar
+7f4ed0d12000-7f4ed0d19000 r--s 00072000 fd:00 84935822                   /home/hive/env/hive-3.1.0/lib/hive-common-3.1.0.jar
+7f4ed0d19000-7f4ed0d1b000 r--s 0000a000 fd:00 84936010                   /home/hive/env/hive-3.1.0/lib/hive-cli-3.1.0.jar
+7f4ed0d1b000-7f4ed0d1c000 r--s 00002000 fd:00 84935823                   /home/hive/env/hive-3.1.0/lib/hive-classification-3.1.0.jar
+7f4ed0d1c000-7f4ed0d1f000 r--s 0002a000 fd:00 84936008                   /home/hive/env/hive-3.1.0/lib/hive-beeline-3.1.0.jar
+7f4ed0d1f000-7f4ed0d22000 r--s 00020000 fd:00 84936021                   /home/hive/env/hive-3.1.0/lib/hive-accumulo-handler-3.1.0.jar
+7f4ed0d22000-7f4ed0d25000 r--s 0001e000 fd:00 84935906                   /home/hive/env/hive-3.1.0/lib/HikariCP-2.6.1.jar
+7f4ed0d25000-7f4ed0d38000 r--s 0014e000 fd:00 84935918                   /home/hive/env/hive-3.1.0/lib/hbase-shaded-protobuf-1.0.1.jar
+7f4ed0d38000-7f4ed0d8a000 r--s 0035d000 fd:00 84935932                   /home/hive/env/hive-3.1.0/lib/hbase-shaded-netty-1.0.1.jar
+7f4ed0d8a000-7f4ed0dcf000 r--s 002ac000 fd:00 84935920                   /home/hive/env/hive-3.1.0/lib/hbase-shaded-miscellaneous-1.0.1.jar
+7f4ed0dcf000-7f4ed0e09000 r--s 00422000 fd:00 84935962                   /home/hive/env/hive-3.1.0/lib/hbase-server-2.0.0-alpha4.jar
+7f4ed0e09000-7f4ed0e0b000 r--s 00010000 fd:00 84935982                   /home/hive/env/hive-3.1.0/lib/hbase-replication-2.0.0-alpha4.jar
+7f4ed0e0b000-7f4ed0e52000 r--s 0052d000 fd:00 84935930                   /home/hive/env/hive-3.1.0/lib/hbase-protocol-shaded-2.0.0-alpha4.jar
+7f4ed0e52000-7f4ed0e7b000 r--s 002e1000 fd:00 84935931                   /home/hive/env/hive-3.1.0/lib/hbase-protocol-2.0.0-alpha4.jar
+7f4ed0e7b000-7f4ed0e7f000 r--s 00029000 fd:00 84935980                   /home/hive/env/hive-3.1.0/lib/hbase-procedure-2.0.0-alpha4.jar
+7f4ed0e7f000-7f4ed0e82000 r--s 00017000 fd:00 84935983                   /home/hive/env/hive-3.1.0/lib/hbase-prefix-tree-2.0.0-alpha4.jar
+7f4ed0e82000-7f4ed0e84000 r--s 00004000 fd:00 84935927                   /home/hive/env/hive-3.1.0/lib/hbase-metrics-api-2.0.0-alpha4.jar
+7f4ed0e84000-7f4ed0e85000 r--s 00006000 fd:00 84935929                   /home/hive/env/hive-3.1.0/lib/hbase-metrics-2.0.0-alpha4.jar
+7f4ed0e85000-7f4ed0e8b000 r--s 0005d000 fd:00 84935988                   /home/hive/env/hive-3.1.0/lib/hbase-mapreduce-2.0.0-alpha4.jar
+7f4ed0e8b000-7f4ed0e8d000 r--s 0000f000 fd:00 84935963                   /home/hive/env/hive-3.1.0/lib/hbase-http-2.0.0-alpha4.jar
+7f4ed0e8d000-7f4ed0e90000 r--s 0000c000 fd:00 84935926                   /home/hive/env/hive-3.1.0/lib/hbase-hadoop-compat-2.0.0-alpha4.jar
+7f4ed0e90000-7f4ed0e92000 r--s 00007000 fd:00 84936013                   /home/hive/env/hive-3.1.0/lib/hbase-hadoop2-compat-2.0.0-alpha4-tests.jar
+7f4ed0e92000-7f4ed0e96000 r--s 0001f000 fd:00 84935928                   /home/hive/env/hive-3.1.0/lib/hbase-hadoop2-compat-2.0.0-alpha4.jar
+7f4ed0e96000-7f4ed0e9b000 r--s 00043000 fd:00 84935981                   /home/hive/env/hive-3.1.0/lib/hbase-common-2.0.0-alpha4-tests.jar
+7f4ed0e9b000-7f4ed0ea8000 r--s 000ae000 fd:00 84935919                   /home/hive/env/hive-3.1.0/lib/hbase-common-2.0.0-alpha4.jar
+7f4ed0ea8000-7f4ed0ec0000 r--s 00192000 fd:00 84935917                   /home/hive/env/hive-3.1.0/lib/hbase-client-2.0.0-alpha4.jar
+7f4ed0ec0000-7f4ed0ef2000 r--s 0026d000 fd:00 84937026                   /home/hive/env/hive-3.1.0/lib/guava-27.0-jre.jar
+7f4ed0ef2000-7f4ed0ef7000 r--s 0002a000 fd:00 84935868                   /home/hive/env/hive-3.1.0/lib/gson-2.2.4.jar
+7f4ed0ef7000-7f4ed0f67000 r--s 00645000 fd:00 84935948                   /home/hive/env/hive-3.1.0/lib/groovy-all-2.4.11.jar
+7f4ed0f67000-7f4ed0f68000 r--s 00002000 fd:00 84935896                   /home/hive/env/hive-3.1.0/lib/flatbuffers-1.2.0-3f79e055.jar
+7f4ed0f68000-7f4ed0f6a000 r--s 00002000 fd:00 84935924                   /home/hive/env/hive-3.1.0/lib/findbugs-annotations-1.3.9-1.jar
+7f4ed0f6a000-7f4ed0f75000 r--s 000d5000 fd:00 84935951                   /home/hive/env/hive-3.1.0/lib/esri-geometry-api-2.0.0.jar
+7f4ed0f75000-7f4ed0f87000 r--s 00223000 fd:00 84936003                   /home/hive/env/hive-3.1.0/lib/ecj-4.4.2.jar
+7f4ed0f87000-7f4ed0f88000 r--s 00009000 fd:00 84936016                   /home/hive/env/hive-3.1.0/lib/druid-hdfs-storage-0.12.0.jar
+7f4ed0f88000-7f4ed0f8b000 r--s 00012000 fd:00 84935987                   /home/hive/env/hive-3.1.0/lib/disruptor-3.3.6.jar
+7f4ed0f8b000-7f4ed0fba000 r--s 002e7000 fd:00 84935910                   /home/hive/env/hive-3.1.0/lib/derby-10.14.1.0.jar
+7f4ed0fba000-7f4ed0fd0000 r--s 001bc000 fd:00 84935913                   /home/hive/env/hive-3.1.0/lib/datanucleus-rdbms-4.1.19.jar
+7f4ed0fd0000-7f4ed0fe9000 r--s 001d4000 fd:00 84935912                   /home/hive/env/hive-3.1.0/lib/datanucleus-core-4.1.17.jar
+7f4ed0fe9000-7f4ed0fee000 r--s 00055000 fd:00 84935911                   /home/hive/env/hive-3.1.0/lib/datanucleus-api-jdo-4.2.4.jar
+7f4ed0fee000-7f4ed0ff6000 r--s 0003e000 fd:00 84935869                   /home/hive/env/hive-3.1.0/lib/curator-recipes-2.12.0.jar
+7f4ed0ff6000-7f4ed0ffc000 r--s 0002c000 fd:00 84935837                   /home/hive/env/hive-3.1.0/lib/curator-framework-2.12.0.jar
+7f4ed0ffc000-7f4ed1033000 r--s 00219000 fd:00 84935838                   /home/hive/env/hive-3.1.0/lib/curator-client-2.12.0.jar
+7f4ed1033000-7f4ed103c000 r--s 00063000 fd:00 84936026                   /home/hive/env/hive-3.1.0/lib/commons-vfs2-2.1.jar
+7f4ed103c000-7f4ed103f000 r--s 00015000 fd:00 84935908                   /home/hive/env/hive-3.1.0/lib/commons-pool-1.5.4.jar
+7f4ed103f000-7f4ed1066000 r--s 001f6000 fd:00 84935856                   /home/hive/env/hive-3.1.0/lib/commons-math3-3.6.1.jar
+7f4ed1066000-7f4ed1077000 r--s 000bb000 fd:00 84936027                   /home/hive/env/hive-3.1.0/lib/commons-math-2.1.jar
+7f4ed1077000-7f4ed1079000 r--s 00008000 fd:00 84935835                   /home/hive/env/hive-3.1.0/lib/commons-logging-1.0.4.jar
+7f4ed1079000-7f4ed107f000 r--s 00058000 fd:00 84935864                   /home/hive/env/hive-3.1.0/lib/commons-lang3-3.2.jar
+7f4ed107f000-7f4ed1084000 r--s 00041000 fd:00 84935831                   /home/hive/env/hive-3.1.0/lib/commons-lang-2.6.jar
+7f4ed1084000-7f4ed1088000 r--s 0002a000 fd:00 84935845                   /home/hive/env/hive-3.1.0/lib/commons-io-2.4.jar
+7f4ed1088000-7f4ed108b000 r--s 00025000 fd:00 84935907                   /home/hive/env/hive-3.1.0/lib/commons-dbcp-1.4.jar
+7f4ed108b000-7f4ed108d000 r--s 0001f000 fd:00 84935923                   /home/hive/env/hive-3.1.0/lib/commons-crypto-1.0.0.jar
+7f4ed108d000-7f4ed1094000 r--s 00056000 fd:00 84935851                   /home/hive/env/hive-3.1.0/lib/commons-compress-1.9.jar
+7f4ed1094000-7f4ed1096000 r--s 00006000 fd:00 84935955                   /home/hive/env/hive-3.1.0/lib/commons-compiler-2.7.6.jar
+7f4ed1096000-7f4ed10a6000 r--s 000a8000 fd:00 84935921                   /home/hive/env/hive-3.1.0/lib/commons-collections4-4.1.jar
+7f4ed10a6000-7f4ed10ad000 r--s 00039000 fd:00 84935836                   /home/hive/env/hive-3.1.0/lib/commons-codec-1.7.jar
+7f4ed10ad000-7f4ed10af000 r--s 00009000 fd:00 84935853                   /home/hive/env/hive-3.1.0/lib/commons-cli-1.2.jar
+7f4ed10af000-7f4ed10ba000 r--s 0006e000 fd:00 84935950                   /home/hive/env/hive-3.1.0/lib/calcite-linq4j-1.16.0.jar
+7f4ed10ba000-7f4ed10be000 r--s 00026000 fd:00 84935956                   /home/hive/env/hive-3.1.0/lib/calcite-druid-1.16.0.jar
+7f4ed10be000-7f4ed1106000 r--s 00444000 fd:00 84935949                   /home/hive/env/hive-3.1.0/lib/calcite-core-1.16.0.jar
+7f4ed1106000-7f4ed110f000 r--s 00062000 fd:00 84935865                   /home/hive/env/hive-3.1.0/lib/avro-1.7.7.jar
+7f4ed110f000-7f4ed116f000 r--s 0055d000 fd:00 84935957                   /home/hive/env/hive-3.1.0/lib/avatica-1.11.0.jar
+7f4ed116f000-7f4ed117f000 r--s 00127000 fd:00 84935894                   /home/hive/env/hive-3.1.0/lib/arrow-vector-0.8.0.jar
+7f4ed117f000-7f4ed119d000 r--s 001ca000 fd:00 84935882                   /home/hive/env/hive-3.1.0/lib/ant-1.9.1.jar
+7f4ed119d000-7f4ed11f7000 r--s 00454000 fd:00 84936022                   /home/hive/env/hive-3.1.0/lib/accumulo-core-1.7.3.jar
+7f4ed11f7000-7f4ed11f8000 ---p 00000000 00:00 0 
+7f4ed11f8000-7f4ed12f8000 rw-p 00000000 00:00 0 
+7f4ed12f8000-7f4ed12fb000 ---p 00000000 00:00 0 
+7f4ed12fb000-7f4ed13f9000 rw-p 00000000 00:00 0 
+7f4ed13f9000-7f4ed13fa000 ---p 00000000 00:00 0 
+7f4ed13fa000-7f4ed13fd000 ---p 00000000 00:00 0 
+7f4ed13fd000-7f4ed14fa000 rw-p 00000000 00:00 0 
+7f4ed14fa000-7f4ed14fb000 ---p 00000000 00:00 0 
+7f4ed14fb000-7f4ed14fe000 ---p 00000000 00:00 0 
+7f4ed14fe000-7f4ed15fb000 rw-p 00000000 00:00 0 
+7f4ed15fb000-7f4ed15fc000 ---p 00000000 00:00 0 
+7f4ed15fc000-7f4ed15ff000 ---p 00000000 00:00 0 
+7f4ed15ff000-7f4ed16fc000 rw-p 00000000 00:00 0 
+7f4ed16fc000-7f4ed16fd000 ---p 00000000 00:00 0 
+7f4ed16fd000-7f4ed1700000 ---p 00000000 00:00 0 
+7f4ed1700000-7f4ed17fd000 rw-p 00000000 00:00 0 
+7f4ed17fd000-7f4ed17fe000 ---p 00000000 00:00 0 
+7f4ed17fe000-7f4ed1801000 ---p 00000000 00:00 0 
+7f4ed1801000-7f4ed18fe000 rw-p 00000000 00:00 0 
+7f4ed18fe000-7f4ed18ff000 ---p 00000000 00:00 0 
+7f4ed18ff000-7f4ed1902000 ---p 00000000 00:00 0 
+7f4ed1902000-7f4ed19ff000 rw-p 00000000 00:00 0 
+7f4ed19ff000-7f4ed1a00000 ---p 00000000 00:00 0 
+7f4ed1a00000-7f4ed1a03000 ---p 00000000 00:00 0 
+7f4ed1a03000-7f4ed1b00000 rw-p 00000000 00:00 0 
+7f4ed1b00000-7f4ed1b01000 ---p 00000000 00:00 0 
+7f4ed1b01000-7f4ed1b04000 ---p 00000000 00:00 0 
+7f4ed1b04000-7f4ed1c01000 rw-p 00000000 00:00 0 
+7f4ed1c01000-7f4ed1c02000 ---p 00000000 00:00 0 
+7f4ed1c02000-7f4ed1c05000 ---p 00000000 00:00 0 
+7f4ed1c05000-7f4ed1d02000 rw-p 00000000 00:00 0 
+7f4ed1d02000-7f4ed1d03000 ---p 00000000 00:00 0 
+7f4ed1d03000-7f4ed1d06000 ---p 00000000 00:00 0 
+7f4ed1d06000-7f4ed1e03000 rw-p 00000000 00:00 0 
+7f4ed1e03000-7f4ed1e04000 ---p 00000000 00:00 0 
+7f4ed1e04000-7f4ed1e07000 ---p 00000000 00:00 0 
+7f4ed1e07000-7f4ed1f04000 rw-p 00000000 00:00 0 
+7f4ed1f04000-7f4ed1f05000 ---p 00000000 00:00 0 
+7f4ed1f05000-7f4ed1f08000 ---p 00000000 00:00 0 
+7f4ed1f08000-7f4ed2005000 rw-p 00000000 00:00 0 
+7f4ed2005000-7f4ed2008000 ---p 00000000 00:00 0 
+7f4ed2008000-7f4ed2106000 rw-p 00000000 00:00 0 
+7f4ed2106000-7f4ed22a1000 r--p 00000000 fd:00 117839754                  /usr/lib/locale/locale-archive
+7f4ed22a1000-7f4ed22a4000 ---p 00000000 00:00 0 
+7f4ed22a4000-7f4ed23a2000 rw-p 00000000 00:00 0 
+7f4ed23a2000-7f4ed23a5000 ---p 00000000 00:00 0 
+7f4ed23a5000-7f4ed24a3000 rw-p 00000000 00:00 0 
+7f4ed24a3000-7f4ed24a4000 ---p 00000000 00:00 0 
+7f4ed24a4000-7f4ed4000000 rw-p 00000000 00:00 0 
+7f4ed4000000-7f4ed78e0000 rw-p 00000000 00:00 0 
+7f4ed78e0000-7f4ed8000000 ---p 00000000 00:00 0 
+7f4ed8000000-7f4ed8001000 r--s 00003000 fd:00 84935889                   /home/hive/env/hive-3.1.0/lib/dropwizard-metrics-hadoop-metrics2-reporter-0.1.2.jar
+7f4ed8001000-7f4ed8004000 r--s 00019000 fd:00 84935905                   /home/hive/env/hive-3.1.0/lib/bonecp-0.8.0.RELEASE.jar
+7f4ed8004000-7f4ed8005000 r--s 00004000 fd:00 84935925                   /home/hive/env/hive-3.1.0/lib/audience-annotations-0.5.0.jar
+7f4ed8005000-7f4ed8007000 r--s 00006000 fd:00 84935994                   /home/hive/env/hive-3.1.0/lib/asm-tree-5.0.1.jar
+7f4ed8007000-7f4ed8009000 r--s 00009000 fd:00 84935993                   /home/hive/env/hive-3.1.0/lib/asm-commons-5.0.1.jar
+7f4ed8009000-7f4ed800a000 r--s 0000c000 fd:00 84935850                   /home/hive/env/hive-3.1.0/lib/asm-5.0.1.jar
+7f4ed800a000-7f4ed9000000 rw-p 00000000 00:00 0 
+7f4ed9000000-7f4edaa20000 rwxp 00000000 00:00 0 
+7f4edaa20000-7f4ee8000000 ---p 00000000 00:00 0 
+7f4ee8000000-7f4eebff5000 rw-p 00000000 00:00 0 
+7f4eebff5000-7f4eec000000 ---p 00000000 00:00 0 
+7f4eec000000-7f4eec002000 r--s 00012000 fd:00 84935897                   /home/hive/env/hive-3.1.0/lib/arrow-memory-0.8.0.jar
+7f4eec002000-7f4eec004000 r--s 0000b000 fd:00 84935895                   /home/hive/env/hive-3.1.0/lib/arrow-format-0.8.0.jar
+7f4eec004000-7f4eec005000 r--s 00000000 fd:00 84936004                   /home/hive/env/hive-3.1.0/lib/apache-jstl-9.3.20.v20170531.jar
+7f4eec005000-7f4eec007000 r--s 00002000 fd:00 84935971                   /home/hive/env/hive-3.1.0/lib/aopalliance-repackaged-2.5.0-b32.jar
+7f4eec007000-7f4eec1fc000 rw-p 00000000 00:00 0 
+7f4eec1fc000-7f4eec3d5000 r--s 03d40000 fd:00 77858340                   /home/hive/env/jdk1.8.0_131/jre/lib/rt.jar
+7f4eec3d5000-7f4eed54e000 rw-p 00000000 00:00 0 
+7f4eed54e000-7f4eed54f000 ---p 00000000 00:00 0 
+7f4eed54f000-7f4eed64f000 rw-p 00000000 00:00 0 
+7f4eed64f000-7f4eed650000 ---p 00000000 00:00 0 
+7f4eed650000-7f4eed750000 rw-p 00000000 00:00 0 
+7f4eed750000-7f4eed751000 ---p 00000000 00:00 0 
+7f4eed751000-7f4eed851000 rw-p 00000000 00:00 0 
+7f4eed851000-7f4eed852000 ---p 00000000 00:00 0 
+7f4eed852000-7f4eed952000 rw-p 00000000 00:00 0 
+7f4eed952000-7f4eed953000 ---p 00000000 00:00 0 
+7f4eed953000-7f4eeda53000 rw-p 00000000 00:00 0 
+7f4eeda53000-7f4eeda54000 ---p 00000000 00:00 0 
+7f4eeda54000-7f4eedb54000 rw-p 00000000 00:00 0 
+7f4eedb54000-7f4eedb55000 ---p 00000000 00:00 0 
+7f4eedb55000-7f4eedc55000 rw-p 00000000 00:00 0 
+7f4eedc55000-7f4eedc56000 ---p 00000000 00:00 0 
+7f4eedc56000-7f4eedd56000 rw-p 00000000 00:00 0 
+7f4eedd56000-7f4eedd57000 ---p 00000000 00:00 0 
+7f4eedd57000-7f4eede57000 rw-p 00000000 00:00 0 
+7f4eede57000-7f4eede58000 ---p 00000000 00:00 0 
+7f4eede58000-7f4eedf58000 rw-p 00000000 00:00 0 
+7f4eedf58000-7f4eedf59000 ---p 00000000 00:00 0 
+7f4eedf59000-7f4eee059000 rw-p 00000000 00:00 0 
+7f4eee059000-7f4eee05a000 ---p 00000000 00:00 0 
+7f4eee05a000-7f4eee15a000 rw-p 00000000 00:00 0 
+7f4eee15a000-7f4eee15b000 ---p 00000000 00:00 0 
+7f4eee15b000-7f4eee2c4000 rw-p 00000000 00:00 0 
+7f4eee2c4000-7f4eee61b000 ---p 00000000 00:00 0 
+7f4eee61b000-7f4eee635000 r-xp 00000000 fd:00 77858545                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libzip.so
+7f4eee635000-7f4eee835000 ---p 0001a000 fd:00 77858545                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libzip.so
+7f4eee835000-7f4eee836000 rw-p 0001a000 fd:00 77858545                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libzip.so
+7f4eee836000-7f4eee841000 r-xp 00000000 fd:00 60298197                   /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f4eee841000-7f4eeea40000 ---p 0000b000 fd:00 60298197                   /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f4eeea40000-7f4eeea41000 r--p 0000a000 fd:00 60298197                   /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f4eeea41000-7f4eeea42000 rw-p 0000b000 fd:00 60298197                   /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f4eeea42000-7f4eeea48000 rw-p 00000000 00:00 0 
+7f4eeea48000-7f4eeea5f000 r-xp 00000000 fd:00 60298194                   /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f4eeea5f000-7f4eeec5e000 ---p 00017000 fd:00 60298194                   /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f4eeec5e000-7f4eeec5f000 r--p 00016000 fd:00 60298194                   /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f4eeec5f000-7f4eeec60000 rw-p 00017000 fd:00 60298194                   /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f4eeec60000-7f4eeec62000 rw-p 00000000 00:00 0 
+7f4eeec62000-7f4eeec6d000 r-xp 00000000 fd:00 60298199                   /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f4eeec6d000-7f4eeee6c000 ---p 0000b000 fd:00 60298199                   /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f4eeee6c000-7f4eeee6d000 r--p 0000a000 fd:00 60298199                   /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f4eeee6d000-7f4eeee6e000 rw-p 0000b000 fd:00 60298199                   /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f4eeee6e000-7f4eeee76000 r-xp 00000000 fd:00 60298195                   /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f4eeee76000-7f4eef076000 ---p 00008000 fd:00 60298195                   /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f4eef076000-7f4eef077000 r--p 00008000 fd:00 60298195                   /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f4eef077000-7f4eef078000 rw-p 00009000 fd:00 60298195                   /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f4eef078000-7f4eef0a3000 r-xp 00000000 fd:00 77858539                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libjava.so
+7f4eef0a3000-7f4eef2a2000 ---p 0002b000 fd:00 77858539                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libjava.so
+7f4eef2a2000-7f4eef2a4000 rw-p 0002a000 fd:00 77858539                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libjava.so
+7f4eef2a4000-7f4eef2b1000 r-xp 00000000 fd:00 77858544                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libverify.so
+7f4eef2b1000-7f4eef4b0000 ---p 0000d000 fd:00 77858544                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libverify.so
+7f4eef4b0000-7f4eef4b2000 rw-p 0000c000 fd:00 77858544                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/libverify.so
+7f4eef4b2000-7f4eef4b9000 r-xp 00000000 fd:00 60298204                   /lib/x86_64-linux-gnu/librt-2.27.so
+7f4eef4b9000-7f4eef6b8000 ---p 00007000 fd:00 60298204                   /lib/x86_64-linux-gnu/librt-2.27.so
+7f4eef6b8000-7f4eef6b9000 r--p 00006000 fd:00 60298204                   /lib/x86_64-linux-gnu/librt-2.27.so
+7f4eef6b9000-7f4eef6ba000 rw-p 00007000 fd:00 60298204                   /lib/x86_64-linux-gnu/librt-2.27.so
+7f4eef6ba000-7f4eef857000 r-xp 00000000 fd:00 60298191                   /lib/x86_64-linux-gnu/libm-2.27.so
+7f4eef857000-7f4eefa56000 ---p 0019d000 fd:00 60298191                   /lib/x86_64-linux-gnu/libm-2.27.so
+7f4eefa56000-7f4eefa57000 r--p 0019c000 fd:00 60298191                   /lib/x86_64-linux-gnu/libm-2.27.so
+7f4eefa57000-7f4eefa58000 rw-p 0019d000 fd:00 60298191                   /lib/x86_64-linux-gnu/libm-2.27.so
+7f4eefa58000-7f4ef0727000 r-xp 00000000 fd:00 77858521                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/server/libjvm.so
+7f4ef0727000-7f4ef0927000 ---p 00ccf000 fd:00 77858521                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/server/libjvm.so
+7f4ef0927000-7f4ef0a00000 rw-p 00ccf000 fd:00 77858521                   /home/hive/env/jdk1.8.0_131/jre/lib/amd64/server/libjvm.so
+7f4ef0a00000-7f4ef0a4b000 rw-p 00000000 00:00 0 
+7f4ef0a4b000-7f4ef0c32000 r-xp 00000000 fd:00 60298187                   /lib/x86_64-linux-gnu/libc-2.27.so
+7f4ef0c32000-7f4ef0e32000 ---p 001e7000 fd:00 60298187                   /lib/x86_64-linux-gnu/libc-2.27.so
+7f4ef0e32000-7f4ef0e36000 r--p 001e7000 fd:00 60298187                   /lib/x86_64-linux-gnu/libc-2.27.so
+7f4ef0e36000-7f4ef0e38000 rw-p 001eb000 fd:00 60298187                   /lib/x86_64-linux-gnu/libc-2.27.so
+7f4ef0e38000-7f4ef0e3c000 rw-p 00000000 00:00 0 
+7f4ef0e3c000-7f4ef0e3f000 r-xp 00000000 fd:00 60298190                   /lib/x86_64-linux-gnu/libdl-2.27.so
+7f4ef0e3f000-7f4ef103e000 ---p 00003000 fd:00 60298190                   /lib/x86_64-linux-gnu/libdl-2.27.so
+7f4ef103e000-7f4ef103f000 r--p 00002000 fd:00 60298190                   /lib/x86_64-linux-gnu/libdl-2.27.so
+7f4ef103f000-7f4ef1040000 rw-p 00003000 fd:00 60298190                   /lib/x86_64-linux-gnu/libdl-2.27.so
+7f4ef1040000-7f4ef1055000 r-xp 00000000 fd:00 77858158                   /home/hive/env/jdk1.8.0_131/lib/amd64/jli/libjli.so
+7f4ef1055000-7f4ef1255000 ---p 00015000 fd:00 77858158                   /home/hive/env/jdk1.8.0_131/lib/amd64/jli/libjli.so
+7f4ef1255000-7f4ef1256000 rw-p 00015000 fd:00 77858158                   /home/hive/env/jdk1.8.0_131/lib/amd64/jli/libjli.so
+7f4ef1256000-7f4ef1270000 r-xp 00000000 fd:00 60298202                   /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f4ef1270000-7f4ef146f000 ---p 0001a000 fd:00 60298202                   /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f4ef146f000-7f4ef1470000 r--p 00019000 fd:00 60298202                   /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f4ef1470000-7f4ef1471000 rw-p 0001a000 fd:00 60298202                   /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f4ef1471000-7f4ef1475000 rw-p 00000000 00:00 0 
+7f4ef1475000-7f4ef149e000 r-xp 00000000 fd:00 60298183                   /lib/x86_64-linux-gnu/ld-2.27.so
+7f4ef149e000-7f4ef149f000 r--s 00002000 fd:00 84936001                   /home/hive/env/hive-3.1.0/lib/apache-jsp-9.3.20.v20170531.jar
+7f4ef149f000-7f4ef14a2000 r--s 00026000 fd:00 84935909                   /home/hive/env/hive-3.1.0/lib/antlr-runtime-3.5.2.jar
+7f4ef14a2000-7f4ef14a9000 r--s 00055000 fd:00 84936031                   /home/hive/env/hive-3.1.0/lib/antlr4-runtime-4.5.jar
+7f4ef14a9000-7f4ef14aa000 r--s 00004000 fd:00 84935883                   /home/hive/env/hive-3.1.0/lib/ant-launcher-1.9.1.jar
+7f4ef14aa000-7f4ef14ad000 r--s 0001e000 fd:00 84935875                   /home/hive/env/hive-3.1.0/lib/aircompressor-0.10.jar
+7f4ef14ad000-7f4ef14ae000 r--s 00003000 fd:00 84936028                   /home/hive/env/hive-3.1.0/lib/accumulo-trace-1.7.3.jar
+7f4ef14ae000-7f4ef14b1000 r--s 0001a000 fd:00 84936024                   /home/hive/env/hive-3.1.0/lib/accumulo-fate-1.7.3.jar
+7f4ef14b1000-7f4ef1588000 rw-p 00000000 00:00 0 
+7f4ef1588000-7f4ef1589000 ---p 00000000 00:00 0 
+7f4ef1589000-7f4ef158c000 ---p 00000000 00:00 0 
+7f4ef158c000-7f4ef168b000 rw-p 00000000 00:00 0 
+7f4ef168b000-7f4ef168d000 r--s 0000b000 fd:00 84936025                   /home/hive/env/hive-3.1.0/lib/accumulo-start-1.7.3.jar
+7f4ef168d000-7f4ef1692000 rw-p 00000000 00:00 0 
+7f4ef1692000-7f4ef169a000 rw-s 00000000 fd:00 34341435                   /tmp/hsperfdata_hive/15982 (deleted)
+7f4ef169a000-7f4ef169b000 rw-p 00000000 00:00 0 
+7f4ef169b000-7f4ef169c000 ---p 00000000 00:00 0 
+7f4ef169c000-7f4ef169e000 rw-p 00000000 00:00 0 
+7f4ef169e000-7f4ef169f000 r--p 00029000 fd:00 60298183                   /lib/x86_64-linux-gnu/ld-2.27.so
+7f4ef169f000-7f4ef16a0000 rw-p 0002a000 fd:00 60298183                   /lib/x86_64-linux-gnu/ld-2.27.so
+7f4ef16a0000-7f4ef16a1000 rw-p 00000000 00:00 0 
+7ffd03e4b000-7ffd03e7a000 rw-p 00000000 00:00 0                          [stack]
+7ffd03f8c000-7ffd03f8f000 r--p 00000000 00:00 0                          [vvar]
+7ffd03f8f000-7ffd03f91000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dproc_jar -Djava.net.preferIPv4Stack=true -Dproc_hivecli -Dlog4j.configurationFile=hive-log4j2.properties -Djava.util.logging.config.file=/home/hive/env/hive-3.1.0/conf/parquet-logging.properties -Dyarn.log.dir=/home/hive/env/hadoop-3.2.1/logs -Dyarn.log.file=hadoop.log -Dyarn.home.dir=/home/hive/env/hadoop-3.2.1 -Dyarn.root.logger=INFO,console -Djava.library.path=/home/hive/env/hadoop-3.2.1/lib/native -Xmx256m -Dhadoop.log.dir=/home/hive/env/hadoop-3.2.1/logs -Dhadoop.log.file=hadoop.log -Dhadoop.home.dir=/home/hive/env/hadoop-3.2.1 -Dhadoop.id.str=hive -Dhadoop.root.logger=INFO,console -Dhadoop.policy.file=hadoop-policy.xml -Dhadoop.security.logger=INFO,NullAppender 
+java_command: org.apache.hadoop.util.RunJar /home/hive/env/hive-3.1.0/lib/hive-cli-3.1.0.jar org.apache.hadoop.hive.cli.CliDriver --hiveconf hive.aux.jars.path=file:///home/hive/env/tez-0.10.1/tez-jars/hadoop-shim-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/tez-jars/hadoop-shim-2.8-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/tez-jars/tez-api-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/tez-jars/tez-build-tools-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/tez-jars/tez-common-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/tez-jars/tez-dag-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/tez-jars/tez-examples-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/tez-jars/tez-history-parser-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/tez-jars/tez-javadoc-tools-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/tez-jars/tez-job-analyzer-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/tez-jars/tez-mapreduce-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/tez-jars/tez-mapreduce-0.10.1-SNAPSHOT.jar.default,file:///home/hive/env/tez-0.10.1/tez-jars/tez-protobuf-history-plugin-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/tez-jars/tez-runtime-internals-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/tez-jars/tez-runtime-internals-0.10.1-SNAPSHOT.jar.default,file:///home/hive/env/tez-0.10.1/tez-jars/tez-runtime-library-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/tez-jars/tez-runtime-library-0.10.1-SNAPSHOT.jar.default,file:///home/hive/env/tez-0.10.1/tez-jars/tez-tests-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/tez-jars/tez-yarn-timeline-cache-plugin-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/tez-jars/tez-yarn-timeline-history-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/tez-jars/tez-yarn-timeline-history-with-acls-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/tez-jars/tez-yarn-timeline-history-with-fs-0.10.1-SNAPSHOT.jar,file:///home/hive/env/tez-0.10.1/te
+java_class_path (initial): /home/hive/env/hive-3.1.0/conf:/home/hive/env/hive-3.1.0/lib/accumulo-core-1.7.3.jar:/home/hive/env/hive-3.1.0/lib/accumulo-fate-1.7.3.jar:/home/hive/env/hive-3.1.0/lib/accumulo-start-1.7.3.jar:/home/hive/env/hive-3.1.0/lib/accumulo-trace-1.7.3.jar:/home/hive/env/hive-3.1.0/lib/aircompressor-0.10.jar:/home/hive/env/hive-3.1.0/lib/ant-1.9.1.jar:/home/hive/env/hive-3.1.0/lib/ant-launcher-1.9.1.jar:/home/hive/env/hive-3.1.0/lib/antlr4-runtime-4.5.jar:/home/hive/env/hive-3.1.0/lib/antlr-runtime-3.5.2.jar:/home/hive/env/hive-3.1.0/lib/aopalliance-repackaged-2.5.0-b32.jar:/home/hive/env/hive-3.1.0/lib/apache-jsp-9.3.20.v20170531.jar:/home/hive/env/hive-3.1.0/lib/apache-jstl-9.3.20.v20170531.jar:/home/hive/env/hive-3.1.0/lib/arrow-format-0.8.0.jar:/home/hive/env/hive-3.1.0/lib/arrow-memory-0.8.0.jar:/home/hive/env/hive-3.1.0/lib/arrow-vector-0.8.0.jar:/home/hive/env/hive-3.1.0/lib/asm-5.0.1.jar:/home/hive/env/hive-3.1.0/lib/asm-commons-5.0.1.jar:/home/hive/env/hive-3.1.0/lib/asm-tree-5.0.1.jar:/home/hive/env/hive-3.1.0/lib/audience-annotations-0.5.0.jar:/home/hive/env/hive-3.1.0/lib/avatica-1.11.0.jar:/home/hive/env/hive-3.1.0/lib/avro-1.7.7.jar:/home/hive/env/hive-3.1.0/lib/bonecp-0.8.0.RELEASE.jar:/home/hive/env/hive-3.1.0/lib/calcite-core-1.16.0.jar:/home/hive/env/hive-3.1.0/lib/calcite-druid-1.16.0.jar:/home/hive/env/hive-3.1.0/lib/calcite-linq4j-1.16.0.jar:/home/hive/env/hive-3.1.0/lib/commons-cli-1.2.jar:/home/hive/env/hive-3.1.0/lib/commons-codec-1.7.jar:/home/hive/env/hive-3.1.0/lib/commons-collections4-4.1.jar:/home/hive/env/hive-3.1.0/lib/commons-compiler-2.7.6.jar:/home/hive/env/hive-3.1.0/lib/commons-compress-1.9.jar:/home/hive/env/hive-3.1.0/lib/commons-crypto-1.0.0.jar:/home/hive/env/hive-3.1.0/lib/commons-dbcp-1.4.jar:/home/hive/env/hive-3.1.0/lib/commons-io-2.4.jar:/home/hive/env/hive-3.1.0/lib/commons-lang-2.6.jar:/home/hive/env/hive-3.1.0/lib/commons-lang3-3.2.jar:/home/hive/env/hive-3.1.0/lib/commons-logging-1.0.4.jar:/home/h
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/home/hive/env/jdk1.8.0_131
+PATH=/home/hive/env/jdk1.8.0_131/bin:/home/hive/env/cmake-3.20.1-linux-x86_64/bin:/home/hive/env/hive-3.1.0/bin:/home/hive/env/jdk1.8.0_131/bin:/home/hive/env/hadoop-3.2.1/bin:/home/hive/env/hadoop-3.2.1/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/cuda/bin
+LD_LIBRARY_PATH=:/usr/local/cuda/lib64:/home/hive/env/jdk1.8.0_131/include:/home/hive/env/jdk1.8.0_131/include/linux
+SHELL=/usr/bin/zsh
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xac8af0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xac8af0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x921dd0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x921dd0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x921dd0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x921dd0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x923610], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x924a10], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x924a10], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x924a10], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x924a10], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=18.04
+DISTRIB_CODENAME=bionic
+DISTRIB_DESCRIPTION="Ubuntu 18.04.5 LTS"
+
+uname:Linux 4.15.0-140-generic #144-Ubuntu SMP Fri Mar 19 14:12:35 UTC 2021 x86_64
+libc:glibc 2.27 NPTL 2.27 
+rlimit: STACK 8192k, CORE 0k, NPROC 2060919, NOFILE 1048576, AS infinity
+load average:0.48 0.90 0.71
+
+/proc/meminfo:
+MemTotal:       527683628 kB
+MemFree:        466196864 kB
+MemAvailable:   503930252 kB
+Buffers:         1923280 kB
+Cached:         37146540 kB
+SwapCached:          248 kB
+Active:         26936788 kB
+Inactive:       32001876 kB
+Active(anon):   17354352 kB
+Inactive(anon):  2187576 kB
+Active(file):    9582436 kB
+Inactive(file): 29814300 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:       8388604 kB
+SwapFree:        8381168 kB
+Dirty:              5356 kB
+Writeback:         15276 kB
+AnonPages:      19868908 kB
+Mapped:           268820 kB
+Shmem:             13844 kB
+Slab:            1948992 kB
+SReclaimable:    1751672 kB
+SUnreclaim:       197320 kB
+KernelStack:       32608 kB
+PageTables:        67856 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    272230416 kB
+Committed_AS:   51086444 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    307200 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:     3940128 kB
+DirectMap2M:    238614528 kB
+DirectMap1G:    293601280 kB
+
+
+CPU:total 16 (initial active 16) (4 cores per cpu, 2 threads per core) family 6 model 85 stepping 4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 5122 CPU @ 3.60GHz
+stepping	: 4
+microcode	: 0x2006a08
+cpu MHz		: 1200.127
+cache size	: 16896 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit
+bogomips	: 7200.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 5122 CPU @ 3.60GHz
+stepping	: 4
+microcode	: 0x2006a08
+cpu MHz		: 1201.311
+cache size	: 16896 KB
+physical id	: 1
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+apicid		: 34
+initial apicid	: 34
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit
+bogomips	: 7202.18
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 5122 CPU @ 3.60GHz
+stepping	: 4
+microcode	: 0x2006a08
+cpu MHz		: 1454.462
+cache size	: 16896 KB
+physical id	: 0
+siblings	: 8
+core id		: 5
+cpu cores	: 4
+apicid		: 10
+initial apicid	: 10
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit
+bogomips	: 7200.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 5122 CPU @ 3.60GHz
+stepping	: 4
+microcode	: 0x2006a08
+cpu MHz		: 1200.179
+cache size	: 16896 KB
+physical id	: 1
+siblings	: 8
+core id		: 5
+cpu cores	: 4
+apicid		: 42
+initial apicid	: 42
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit
+bogomips	: 7202.18
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 5122 CPU @ 3.60GHz
+stepping	: 4
+microcode	: 0x2006a08
+cpu MHz		: 1200.304
+cache size	: 16896 KB
+physical id	: 0
+siblings	: 8
+core id		: 9
+cpu cores	: 4
+apicid		: 18
+initial apicid	: 18
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit
+bogomips	: 7200.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 5122 CPU @ 3.60GHz
+stepping	: 4
+microcode	: 0x2006a08
+cpu MHz		: 1200.204
+cache size	: 16896 KB
+physical id	: 1
+siblings	: 8
+core id		: 9
+cpu cores	: 4
+apicid		: 50
+initial apicid	: 50
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit
+bogomips	: 7202.18
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 5122 CPU @ 3.60GHz
+stepping	: 4
+microcode	: 0x2006a08
+cpu MHz		: 1200.480
+cache size	: 16896 KB
+physical id	: 0
+siblings	: 8
+core id		: 13
+cpu cores	: 4
+apicid		: 26
+initial apicid	: 26
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit
+bogomips	: 7200.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 5122 CPU @ 3.60GHz
+stepping	: 4
+microcode	: 0x2006a08
+cpu MHz		: 1200.255
+cache size	: 16896 KB
+physical id	: 1
+siblings	: 8
+core id		: 13
+cpu cores	: 4
+apicid		: 58
+initial apicid	: 58
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit
+bogomips	: 7202.18
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 8
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 5122 CPU @ 3.60GHz
+stepping	: 4
+microcode	: 0x2006a08
+cpu MHz		: 1200.539
+cache size	: 16896 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit
+bogomips	: 7200.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 9
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 5122 CPU @ 3.60GHz
+stepping	: 4
+microcode	: 0x2006a08
+cpu MHz		: 1200.265
+cache size	: 16896 KB
+physical id	: 1
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+apicid		: 35
+initial apicid	: 35
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit
+bogomips	: 7202.18
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 10
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 5122 CPU @ 3.60GHz
+stepping	: 4
+microcode	: 0x2006a08
+cpu MHz		: 1398.537
+cache size	: 16896 KB
+physical id	: 0
+siblings	: 8
+core id		: 5
+cpu cores	: 4
+apicid		: 11
+initial apicid	: 11
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit
+bogomips	: 7200.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 11
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 5122 CPU @ 3.60GHz
+stepping	: 4
+microcode	: 0x2006a08
+cpu MHz		: 1201.026
+cache size	: 16896 KB
+physical id	: 1
+siblings	: 8
+core id		: 5
+cpu cores	: 4
+apicid		: 43
+initial apicid	: 43
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit
+bogomips	: 7202.18
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 12
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 5122 CPU @ 3.60GHz
+stepping	: 4
+microcode	: 0x2006a08
+cpu MHz		: 1200.004
+cache size	: 16896 KB
+physical id	: 0
+siblings	: 8
+core id		: 9
+cpu cores	: 4
+apicid		: 19
+initial apicid	: 19
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit
+bogomips	: 7200.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 13
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 5122 CPU @ 3.60GHz
+stepping	: 4
+microcode	: 0x2006a08
+cpu MHz		: 1200.966
+cache size	: 16896 KB
+physical id	: 1
+siblings	: 8
+core id		: 9
+cpu cores	: 4
+apicid		: 51
+initial apicid	: 51
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit
+bogomips	: 7202.18
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 14
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 5122 CPU @ 3.60GHz
+stepping	: 4
+microcode	: 0x2006a08
+cpu MHz		: 1200.369
+cache size	: 16896 KB
+physical id	: 0
+siblings	: 8
+core id		: 13
+cpu cores	: 4
+apicid		: 27
+initial apicid	: 27
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit
+bogomips	: 7200.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 15
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 5122 CPU @ 3.60GHz
+stepping	: 4
+microcode	: 0x2006a08
+cpu MHz		: 1200.083
+cache size	: 16896 KB
+physical id	: 1
+siblings	: 8
+core id		: 13
+cpu cores	: 4
+apicid		: 59
+initial apicid	: 59
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit
+bogomips	: 7202.18
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 527683628k(466196864k free), swap 8388604k(8381168k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.131-b11) for linux-amd64 JRE (1.8.0_131-b11), built on Mar 15 2017 01:23:40 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Tue Jul  6 07:02:55 2021
+elapsed time: 61 seconds (0d 0h 1m 1s)
+

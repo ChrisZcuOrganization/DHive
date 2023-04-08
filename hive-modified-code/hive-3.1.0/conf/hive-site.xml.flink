@@ -1,0 +1,71 @@
+<configuration>
+
+<property>
+  <name>hive.metastore.uris</name>
+  <value>thrift://localhost:9083</value>
+</property>
+ <property>
+        <name>javax.jdo.option.ConnectionURL</name>
+        <value>jdbc:mysql://127.0.0.1:3306/hive310?createDatabaseIfNotExist=true&amp;useSSL=false</value>
+    </property>
+
+    <property>
+        <name>javax.jdo.option.ConnectionDriverName</name>
+        <value>com.mysql.jdbc.Driver</value>
+    </property>
+
+
+    <property>
+        <name>javax.jdo.option.ConnectionUserName</name>
+        <value>hive</value>
+    </property>
+
+    <property>
+        <name>javax.jdo.option.ConnectionPassword</name>
+        <value>dbgroupDBGROUP1314</value>
+    </property>
+
+    <property>
+        <name>hive.auto.convert.join</name>
+        <value>true</value>
+    </property>
+
+    <property>
+	<name>hive.execution.engine</name>
+	<value>tez</value>
+    </property>
+
+	<property>
+		<name>tez.am.resource.memory.mb</name>
+		<value>10240</value>  <!--10GB-->
+	</property>
+
+	<property>
+		<name>hive.tez.container.size</name>
+		<value>10240</value>
+	</property>
+
+	<property>
+		<name>hive.tez.java.opts</name>
+		<value>-server -Xmx327600m -Djava.net.preferIPv4Stack=true -XX:+UseNUMA -XX:+UseParallelGC</value>
+	</property>
+
+	<property>
+		<name>tez.am.java.opts</name>
+		<value>-server -Xmx327600m -Djava.net.preferIPv4Stack=true -XX:+UseNUMA -XX:+UseParallelGC</value>
+	</property>
+ 
+	<property>
+		<name>hive.exec.orc.default.block.size</name>
+		<value>268435456</value>
+	</property>
+
+
+	<property>
+		<name>hive.metastore.warehouse.dir</name>
+		<value>/hive-3.1.0</value>
+		<description>location of default database for the warehouse</description>
+   </property>
+
+</configuration>
+
